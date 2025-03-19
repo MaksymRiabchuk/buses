@@ -1,7 +1,10 @@
 <script setup>
 import {ref, reactive, onMounted} from "vue";
+import SubHeader from "./SubHeader.vue";
+import MainHeader from "./MainHeader.vue";
+
 const props = defineProps({
-    data:String,
+    data: String,
 });
 onMounted(() => {
     console.log(props);
@@ -9,7 +12,14 @@ onMounted(() => {
 </script>
 
 <template>
-    Main page of the site
+    <SubHeader></SubHeader>
+    <MainHeader></MainHeader>
+    <div class="bg-[#ECF0FB]">
+        <div class="mx-[382px]">
+            <img :src="'/storage/index1.jpg'" alt="" class="pt-20">
+            de
+        </div>
+    </div>
 </template>
 
 <style scoped>
