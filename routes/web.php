@@ -12,3 +12,7 @@ Route::prefix('admin')->group(function () {
 });
 
 Route::get('/', [MainController::class, 'index']);
+Route::get('/about-us', [MainController::class, 'aboutUs']);
+Route::get('/team', [MainController::class, 'team']);
+Route::get('/pricing', [MainController::class, 'pricing']);
+Route::get('/landing', [MainController::class, 'landing']);
