@@ -2,13 +2,15 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\MainPage;
 use Inertia\Inertia;
 
 class MainController extends Controller
 {
     public function index()
     {
-        return view('index');
+        $mainPage = MainPage::first();
+        return view('index', ['mainPage' => $mainPage]);
     }
 
     public function aboutUs()

@@ -5,7 +5,11 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\UpdateMainPageRequest;
 use App\Models\Blog;
+use App\Models\Employee;
+use App\Models\Faq;
+use App\Models\Gallery;
 use App\Models\MainPage;
+use App\Models\Slider;
 use Inertia\Inertia;
 
 class MainPageController extends Controller
@@ -35,7 +39,16 @@ class MainPageController extends Controller
         $model = self::MODEL;
         $folderName = self::FOLDER_NAME;
         $item = $model::findOrFail(1);
-        return Inertia::render("$folderName", ['item' => $item, 'isUpdating' => true]);
+
+        $item['sliders'] = Slider::all()->toArray();
+        $item['gallery'] = Gallery::all()->toArray();
+        $item['faqs'] = Faq::all()->toArray();
+        $item['employees'] = Employee::all()->toArray();
+
+        return Inertia::render("$folderName", [
+            'item' => $item,
+            'isUpdating' => true,
+        ]);
     }
 
     /**
@@ -49,60 +62,57 @@ class MainPageController extends Controller
         if (preg_match('/^data:(image\/(\w+));base64,(.+)$/', $data['first_main_image'])) {
             $data['first_main_image'] = MainPage::processImage($data['first_main_image'], 1);
         }
-        if (preg_match('/^data:(image\/(\w+));base64,(.+)$/', $data['slider_img_1'])) {
-            $data['slider_img_1'] = MainPage::processImage($data['slider_img_1'], 1);
-        }
-        if (preg_match('/^data:(image\/(\w+));base64,(.+)$/', $data['slider_img_2'])) {
-            $data['slider_img_2'] = MainPage::processImage($data['slider_img_2'], 1);
-        }
-        if (preg_match('/^data:(image\/(\w+));base64,(.+)$/', $data['slider_img_3'])) {
-            $data['slider_img_3'] = MainPage::processImage($data['slider_img_3'], 1);
-        }
-        if (preg_match('/^data:(image\/(\w+));base64,(.+)$/', $data['slider_img_4'])) {
-            $data['slider_img_4'] = MainPage::processImage($data['slider_img_4'], 1);
-        }
-        if (preg_match('/^data:(image\/(\w+));base64,(.+)$/', $data['slider_img_5'])) {
-            $data['slider_img_5'] = MainPage::processImage($data['slider_img_5'], 1);
-        }
-        if (preg_match('/^data:(image\/(\w+));base64,(.+)$/', $data['slider_img_6'])) {
-            $data['slider_img_6'] = MainPage::processImage($data['slider_img_6'], 1);
-        }
-        if (preg_match('/^data:(image\/(\w+));base64,(.+)$/', $data['gallery_item_image_1'])) {
-            $data['gallery_item_image_1'] = MainPage::processImage($data['gallery_item_image_1'], 1);
-        }
-        if (preg_match('/^data:(image\/(\w+));base64,(.+)$/', $data['gallery_item_image_2'])) {
-            $data['gallery_item_image_2'] = MainPage::processImage($data['gallery_item_image_2'], 1);
-        }
-        if (preg_match('/^data:(image\/(\w+));base64,(.+)$/', $data['gallery_item_image_3'])) {
-            $data['gallery_item_image_3'] = MainPage::processImage($data['gallery_item_image_3'], 1);
-        }
-        if (preg_match('/^data:(image\/(\w+));base64,(.+)$/', $data['gallery_item_image_4'])) {
-            $data['gallery_item_image_4'] = MainPage::processImage($data['gallery_item_image_4'], 1);
-        }
-        if (preg_match('/^data:(image\/(\w+));base64,(.+)$/', $data['gallery_item_image_5'])) {
-            $data['gallery_item_image_5'] = MainPage::processImage($data['gallery_item_image_5'], 1);
-        }
-        if (preg_match('/^data:(image\/(\w+));base64,(.+)$/', $data['gallery_item_image_6'])) {
-            $data['gallery_item_image_6'] = MainPage::processImage($data['gallery_item_image_6'], 1);
+        Slider::all()->each(function (Slider $slider) {
+            $slider->delete();
+        });
+        foreach ($data['sliders'] as $key => $value) {
+            if (!Slider::where('id', $value['id'])->exists()) {
+                $slider = new Slider();
+                if (preg_match('/^data:(image\/(\w+));base64,(.+)$/', $value['image'])) {
+                    $value['image'] = MainPage::processImage($value['image'], $key);
+                }
+                $slider->fill($value);
+                $slider->save();
+            }
         }
 
-        if (preg_match('/^data:(image\/(\w+));base64,(.+)$/', $data['team_member_image_1'])) {
-            $data['team_member_image_1'] = MainPage::processImage($data['team_member_image_1'], 1);
+        Gallery::all()->each(function (Gallery $gallery) {
+            $gallery->delete();
+        });
+        foreach ($data['gallery'] as $key => $value) {
+            if (!Gallery::where('id', $value['id'])->exists()) {
+                $gallery = new Gallery();
+                if (preg_match('/^data:(image\/(\w+));base64,(.+)$/', $value['image'])) {
+                    $value['image'] = MainPage::processImage($value['image'], $key);
+                }
+                $gallery->fill($value);
+                $gallery->save();
+            }
         }
-        if (preg_match('/^data:(image\/(\w+));base64,(.+)$/', $data['team_member_image_2'])) {
-            $data['team_member_image_2'] = MainPage::processImage($data['team_member_image_2'], 1);
+
+        Faq::all()->each(function (Faq $faq) {
+            $faq->delete();
+        });
+        foreach ($data['faqs'] as $key => $value) {
+            if (!Faq::where('id', $value['id'])->exists()) {
+                $faq = new Faq();
+                $faq->fill($value);
+                $faq->save();
+            }
         }
-        if (preg_match('/^data:(image\/(\w+));base64,(.+)$/', $data['team_member_image_3'])) {
-            $data['team_member_image_3'] = MainPage::processImage($data['team_member_image_3'], 1);
-        }
-        if (preg_match('/^data:(image\/(\w+));base64,(.+)$/', $data['team_member_image_4'])) {
-            $data['team_member_image_4'] = MainPage::processImage($data['team_member_image_4'], 1);
-        }
-        if (preg_match('/^data:(image\/(\w+));base64,(.+)$/', $data['team_member_image_5'])) {
-            $data['team_member_image_5'] = MainPage::processImage($data['team_member_image_5'], 1);
-        }
-        if (preg_match('/^data:(image\/(\w+));base64,(.+)$/', $data['team_member_image_6'])) {
-            $data['team_member_image_6'] = MainPage::processImage($data['team_member_image_6'], 1);
+
+        Employee::all()->each(function (Employee $employee) {
+            $employee->delete();
+        });
+        foreach ($data['employees'] as $key => $value) {
+            if (!Employee::where('id', $value['id'])->exists()) {
+                $employee = new Employee();
+                if (preg_match('/^data:(image\/(\w+));base64,(.+)$/', $value['image'])) {
+                    $value['image'] = MainPage::processImage($value['image'], $key);
+                }
+                $employee->fill($value);
+                $employee->save();
+            }
         }
 
         $item = $model::where('id', 1)->first();

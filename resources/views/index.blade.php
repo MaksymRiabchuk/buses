@@ -12,7 +12,7 @@
     <section class="u-clearfix u-container-align-center-xs u-palette-1-light-3 u-section-1" id="carousel_8fae">
         <div class="u-expanded-width u-palette-1-light-2 u-shape u-shape-rectangle u-shape-1"
              data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="500"></div>
-        <img src="storage/images/mechanic-preparing-check-list3.jpg" alt="" class="u-image u-image-default u-image-1"
+        <img src="storage/main/{{$mainPage->first_main_image}}" alt="" class="u-image u-image-default u-image-1"
              data-image-width="1500" data-image-height="1000" data-animation-name="customAnimationIn"
              data-animation-duration="1500" data-animation-delay="0">
         <div class="custom-expanded u-container-align-center-xs u-container-align-left-lg u-container-align-left-md u-container-align-left-sm u-container-align-left-xl u-container-style u-group u-white u-group-1"
@@ -20,15 +20,14 @@
              data-animation-direction="X">
             <div class="u-container-layout u-valign-middle u-container-layout-1">
                 <h2 class="u-align-center-xs u-align-left-lg u-align-left-md u-align-left-sm u-align-left-xl u-text u-text-1">
-                    Car Repair<br>
+                    {{$mainPage->first_main_title}}<br>
                 </h2>
                 <p class="u-align-center-xs u-align-left-lg u-align-left-md u-align-left-sm u-align-left-xl u-text u-text-2"
                    data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="">
-                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                    Excepteur sint occaecat cupidatat non proident </p>
+                    {{$mainPage->first_main_text}}</p>
                 <a href="#"
                    class="u-active-palette-5-dark-3 u-align-center-xs u-align-left-lg u-align-left-md u-align-left-sm u-align-left-xl u-border-none u-btn u-btn-round u-button-style u-hover-palette-5-dark-3 u-palette-1-base u-radius-2 u-text-active-white u-text-hover-white u-btn-1">
-                    Need a car inspection?</a>
+                    {{$mainPage->first_main_btn_text}}</a>
             </div>
         </div>
     </section>
@@ -39,50 +38,50 @@
                 <div class="u-repeater u-repeater-1">
                     <div class="u-align-left u-container-align-left u-container-style u-list-item u-repeater-item u-white u-list-item-1">
                         <div class="u-container-layout u-similar-container u-valign-top u-container-layout-1">
-                            <h3 class="u-align-left u-text u-text-2"> Auto Repair</h3>
-                            <p class="u-align-left u-text u-text-3">Sample text. Click to select the Text Element.</p>
+                            <h3 class="u-align-left u-text u-text-2"> {{$mainPage->slider_title_1}}</h3>
+                            <p class="u-align-left u-text u-text-3">{{$mainPage->slider_text_1}}</p>
                             <span class="u-align-left u-file-icon u-icon u-text-palette-2-base u-icon-1"><img
-                                    src="storage/images/2822686-d51604f5.png" alt=""></span>
+                                    src="storage/main/{{$mainPage->slider_img_1}}" alt=""></span>
                         </div>
                     </div>
                     <div class="u-align-left u-container-align-left u-container-style u-list-item u-repeater-item u-video-cover u-white u-list-item-2">
                         <div class="u-container-layout u-similar-container u-valign-top u-container-layout-2">
-                            <h3 class="u-align-left u-text u-text-4"> Auto Repair</h3>
-                            <p class="u-align-left u-text u-text-5">Sample text. Click to select the Text Element.</p>
+                            <h3 class="u-align-left u-text u-text-4">{{$mainPage->slider_title_2}}</h3>
+                            <p class="u-align-left u-text u-text-5">{{$mainPage->slider_text_2}}</p>
                             <span class="u-align-left u-file-icon u-icon u-text-palette-2-base u-icon-2"><img
-                                    src="storage/images/1743705-6a3eb0b6.png" alt=""></span>
+                                    src="storage/main/{{$mainPage->slider_img_2}}" alt=""></span>
                         </div>
                     </div>
                     <div class="u-align-left u-container-align-left u-container-style u-list-item u-repeater-item u-video-cover u-white u-list-item-3">
                         <div class="u-container-layout u-similar-container u-valign-top u-container-layout-3">
-                            <h3 class="u-align-left u-text u-text-6"> Auto Glass Repair</h3>
-                            <p class="u-align-left u-text u-text-7">Sample text. Click to select the Text Element.</p>
+                            <h3 class="u-align-left u-text u-text-6"> {{$mainPage->slider_title_3}}</h3>
+                            <p class="u-align-left u-text u-text-7">{{$mainPage->slider_text_3}}</p>
                             <span class="u-align-left u-file-icon u-icon u-text-palette-2-base u-icon-3"><img
-                                    src="storage/images/16096073-d0fe1288.png" alt=""></span>
+                                    src="storage/main/{{$mainPage->slider_img_3}}" alt=""></span>
                         </div>
                     </div>
                     <div class="u-align-left u-container-align-left u-container-style u-list-item u-repeater-item u-video-cover u-white u-list-item-4">
                         <div class="u-container-layout u-similar-container u-valign-top u-container-layout-4">
-                            <h3 class="u-align-left u-text u-text-8"> Oil Change</h3>
-                            <p class="u-align-left u-text u-text-9">Sample text. Click to select the Text Element.</p>
+                            <h3 class="u-align-left u-text u-text-8">{{$mainPage->slider_title_4}}</h3>
+                            <p class="u-align-left u-text u-text-9">{{$mainPage->slider_text_4}}</p>
                             <span class="u-align-left u-file-icon u-icon u-text-palette-2-base u-icon-4"><img
-                                    src="storage/images/5442963-a212bfbf.png" alt=""></span>
+                                    src="storage/main/{{$mainPage->slider_img_4}}" alt=""></span>
                         </div>
                     </div>
                     <div class="u-align-left u-container-align-left u-container-style u-list-item u-repeater-item u-video-cover u-white u-list-item-5">
                         <div class="u-container-layout u-similar-container u-valign-top u-container-layout-5">
-                            <h3 class="u-align-left u-text u-text-10"> General repair</h3>
-                            <p class="u-align-left u-text u-text-11">Sample text. Click to select the Text Element.</p>
+                            <h3 class="u-align-left u-text u-text-10"> {{$mainPage->slider_title_5}}</h3>
+                            <p class="u-align-left u-text u-text-11">{{$mainPage->slider_text_5}}</p>
                             <span class="u-align-left u-file-icon u-icon u-text-palette-2-base u-icon-5"><img
-                                    src="storage/images/942147-dd80c966.png" alt=""></span>
+                                    src="storage/main/{{$mainPage->slider_img_5}}" alt=""></span>
                         </div>
                     </div>
                     <div class="u-align-left u-container-align-left u-container-style u-list-item u-repeater-item u-video-cover u-white u-list-item-6">
                         <div class="u-container-layout u-similar-container u-valign-top u-container-layout-6">
-                            <h3 class="u-align-left u-text u-text-12"> Auto Body Work</h3>
-                            <p class="u-align-left u-text u-text-13">Sample text. Click to select the Text Element.</p>
+                            <h3 class="u-align-left u-text u-text-12"> {{$mainPage->slider_title_6}}</h3>
+                            <p class="u-align-left u-text u-text-13">{{$mainPage->slider_text_6}}</p>
                             <span class="u-align-left u-file-icon u-icon u-text-palette-2-base u-icon-6"><img
-                                    src="storage/images/12050562-ea0861df.png" alt=""></span>
+                                    src="storage/main/{{$mainPage->slider_img_6}}" alt=""></span>
                         </div>
                     </div>
                 </div>
@@ -125,10 +124,7 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
                              data-animation-delay="500">
                             <div class="u-container-layout u-valign-middle u-container-layout-1" src="">
                                 <h3 class="u-align-left u-text u-text-1">About Us</h3>
-                                <p class="u-align-left u-large-text u-text u-text-default u-text-variant u-text-2">Sample
-                                    text. Click to select the Text Element.&nbsp;​Duis aute irure dolor in reprehenderit in
-                                    voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                                    cupidatat non proident</p>
+                                <p class="u-align-left u-large-text u-text u-text-default u-text-variant u-text-2">{{$mainPage->about_us_text}}</p>
                                 <a href="#"
                                    class="u-active-palette-5-dark-3 u-align-left u-border-none u-btn u-btn-round u-button-style u-hover-palette-5-dark-3 u-palette-1-base u-radius-2 u-text-active-white u-text-hover-white u-btn-1">Learn
                                     more </a>
@@ -144,11 +140,8 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
                                              data-href="#" data-animation-name="customAnimationIn"
                                              data-animation-duration="1500">
                                             <div class="u-container-layout u-similar-container u-valign-top u-container-layout-3">
-                                                <h5 class="u-align-left u-text u-text-default u-text-3"> Modern
-                                                    Workshop</h5>
-                                                <p class="u-align-left u-text u-text-default u-text-4"> Sample text. Click
-                                                    to select the Text Element.&nbsp;Nunc placerat pharetra lorem lorem
-                                                    metus.</p>
+                                                <h5 class="u-align-left u-text u-text-default u-text-3">{{$mainPage->about_us_item_title_1}}</h5>
+                                                <p class="u-align-left u-text u-text-default u-text-4">{{$mainPage->about_us_item_text_1}}</p>
                                             </div>
                                         </div>
                                         <div class="u-container-align-left u-container-style u-list-item u-palette-1-light-3 u-repeater-item u-shape-rectangle u-list-item-2"
@@ -156,11 +149,8 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
                                              data-animation-name="customAnimationIn" data-animation-duration="1500"
                                              data-animation-delay="250">
                                             <div class="u-container-layout u-similar-container u-valign-top u-container-layout-4">
-                                                <h5 class="u-align-left u-text u-text-default u-text-5"> Talented
-                                                    Workers</h5>
-                                                <p class="u-align-left u-text u-text-default u-text-6">Sample text. Click to
-                                                    select the Text Element.&nbsp;Nunc placerat pharetra lorem lorem
-                                                    metus.</p>
+                                                <h5 class="u-align-left u-text u-text-default u-text-5"> {{$mainPage->about_us_item_title_2}}</h5>
+                                                <p class="u-align-left u-text u-text-default u-text-6">{{$mainPage->about_us_item_text_2}}</p>
                                             </div>
                                         </div>
                                         <div class="u-container-align-left u-container-style u-list-item u-palette-1-light-3 u-repeater-item u-shape-rectangle u-list-item-3"
@@ -168,12 +158,9 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
                                              data-animation-name="customAnimationIn" data-animation-duration="1500"
                                              data-animation-delay="500">
                                             <div class="u-container-layout u-similar-container u-valign-top u-container-layout-5">
-                                                <h5 class="u-align-left u-text u-text-default u-text-7"> Leading Auto
-                                                    Specialist<br>
+                                                <h5 class="u-align-left u-text u-text-default u-text-7"> {{$mainPage->about_us_item_title_3}}<br>
                                                 </h5>
-                                                <p class="u-align-left u-text u-text-default u-text-8"> Sample text. Click
-                                                    to select the Text Element.&nbsp;Nunc placerat pharetra lorem lorem
-                                                    metus.</p>
+                                                <p class="u-align-left u-text u-text-default u-text-8"> {{$mainPage->about_us_item_text_3}}</p>
                                             </div>
                                         </div>
                                     </div>
@@ -193,28 +180,29 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
                 data-animation-duration="1500" data-animation-delay="500" data-animation-direction="X"> Our Areas Of
                 Expertise</h2>
             <p class="u-align-center u-text u-text-2" data-animation-name="customAnimationIn" data-animation-duration="1500"
-               data-animation-delay="250"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                incididunt ut labore et dolore magna aliqua.</p>
+               data-animation-delay="250"> {{$mainPage->gallery_text}}</p>
             <div class="u-expanded-width u-list u-list-1">
                 <div class="u-repeater u-repeater-1">
                     <div class="u-align-center u-container-align-center u-container-align-center-xs u-container-style u-image u-image-default u-list-item u-repeater-item u-shape-round u-image-1"
+                         style="background-image: url('storage/main/{{$mainPage->gallery_item_image_1}}')"
                          data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="500"
                          data-image-width="1380" data-image-height="918">
                         <div class="u-container-layout u-similar-container u-valign-bottom u-container-layout-1">
                             <div class="u-black u-container-align-center u-container-style u-expanded-width u-group u-opacity u-opacity-65 u-group-1">
                                 <div class="u-container-layout u-valign-middle u-container-layout-2">
-                                    <h6 class="u-align-center u-hover-feature u-text u-text-3"> Filter Change Service</h6>
+                                    <h6 class="u-align-center u-hover-feature u-text u-text-3"> {{$mainPage->gallery_item_title_1}}</h6>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="u-align-center u-container-align-center u-container-align-center-xs u-container-style u-image u-image-default u-list-item u-repeater-item u-shape-round u-image-2"
+                    <div class="u-align-center u-container-align-center u-container-align-center-xs u-container-style u-image u-image-default u-list-item u-repeater-item u-shape-round"
+                         style="background-image: url('{{$mainPage->gallery_item_image_2}}')"
                          data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="500"
                          data-image-width="1380" data-image-height="920">
                         <div class="u-container-layout u-similar-container u-valign-bottom u-container-layout-3">
                             <div class="u-black u-container-style u-expanded-width u-group u-opacity u-opacity-65 u-group-2">
                                 <div class="u-container-layout u-valign-middle u-container-layout-4">
-                                    <h6 class="u-align-center u-hover-feature u-text u-text-4"> Tire Care </h6>
+                                    <h6 class="u-align-center u-hover-feature u-text u-text-4"> {{$mainPage->gallery_item_title_2}} </h6>
                                 </div>
                             </div>
                         </div>
