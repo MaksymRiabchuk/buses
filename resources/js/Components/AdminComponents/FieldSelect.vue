@@ -77,7 +77,7 @@ watch(() => props.modelValue, (newValue) => {
         :for="id"
         :class="[
         'block text-gray-700 font-semibold mb-2',
-        error ? 'text-red-600' : 'text-gray-700 dark:text-gray-300'
+        error ? 'text-red-600' : 'text-gray-700 dark:text-gray-700'
       ]"
     >
       {{ label }}<span class="required" v-if="required">*</span>
@@ -88,13 +88,13 @@ watch(() => props.modelValue, (newValue) => {
         :id="id"
         :class="[
         'py-2 rounded-md px-4 mt-1 block w-full',
-        'dark:bg-dark-eval-1 dark:text-gray-300 dark:focus:ring-offset-dark-eval-1',
+        'dark:bg-dark-eval-1 dark:text-gray-700 dark:focus:ring-offset-dark-eval-1',
         error
           ? 'border-red-500 focus:border-red-500 focus:ring-red-500'
           : 'border-gray-300 focus:border-indigo-500 focus:ring-indigo-500',
         error
           ? 'focus:ring-red-500'
-          : 'focus:ring-purple-500 focus:ring-offset-2 focus:ring-offset-white dark:border-gray-600'
+          : 'focus:ring-purple-500 focus:ring-offset-2 focus:ring-offset-white dark:border-gray-300'
       ]"
         :value="modelValue"
         @change="$emit('update:modelValue', $event.target.value)"

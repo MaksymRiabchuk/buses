@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\AboutUsPage;
 use App\Models\Employee;
 use App\Models\Faq;
 use App\Models\Gallery;
 use App\Models\MainPage;
+use App\Models\Review;
 use App\Models\Slider;
 use Inertia\Inertia;
 
@@ -23,7 +25,10 @@ class MainController extends Controller
 
     public function aboutUs()
     {
-        return view('about_us');
+        $aboutUs = AboutUsPage::first()->toArray();
+        $aboutUs['employees'] = Employee::all()->toArray();
+        $aboutUs['reviews'] = Review::all()->toArray();
+        return view('about_us',['aboutUs' => $aboutUs]);
     }
 
     public function team()

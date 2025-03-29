@@ -443,7 +443,7 @@ const removeEmployee = (index) => {
                     <div style="width: 20%">
                         <div class="relative max-w-[250px]">
                             <label
-                                :class="['block text-gray-700 font-semibold mb-2', form.errors.first_main_image ? 'text-red-600' : 'text-gray-700 dark:text-gray-300']">
+                                :class="['block text-gray-700 font-semibold mb-2', form.errors.first_main_image ? 'text-red-600' : 'text-gray-700 dark:text-gray-700']">
                                 Зображення
                             </label>
                             <div class="w-full overflow-hidden rounded-md border border-gray-300"
@@ -542,7 +542,7 @@ const removeEmployee = (index) => {
                     </div>
                     <div class="relative w-full h-[200px]">
                         <label
-                            :class="['block text-gray-700 font-semibold mb-2', form.errors['sliders.' + index + '.image'] ? 'text-red-600' : 'text-gray-700 dark:text-gray-300']">
+                            :class="['block text-gray-700 font-semibold mb-2', form.errors['sliders.' + index + '.image'] ? 'text-red-600' : 'text-gray-700 dark:text-gray-700']">
                             Зображення елементу
                         </label>
                         <div class="w-full overflow-hidden rounded-md border border-gray-300"
@@ -679,7 +679,7 @@ const removeEmployee = (index) => {
                         </div>
                         <div class="relative w-full h-[200px]">
                             <label
-                                :class="['block text-gray-700 font-semibold mb-2', form.errors['gallery.' + index + '.image'] ? 'text-red-600' : 'text-gray-700 dark:text-gray-300']">
+                                :class="['block text-gray-700 font-semibold mb-2', form.errors['gallery.' + index + '.image'] ? 'text-red-600' : 'text-gray-700 dark:text-gray-700']">
                                 Зображення елементу галереї
                             </label>
                             <div class="w-full overflow-hidden rounded-md border border-gray-300"
@@ -730,7 +730,7 @@ const removeEmployee = (index) => {
                     </div>
                 </div>
             </div>
-            <div v-if="currentMainTab==='faqs'" style="max-height: 68vh; overflow-y: auto;">
+            <div v-if="currentMainTab==='faqs'" style="">
                 <div class="flex-col">
                     <div>
                         <Field
@@ -757,7 +757,7 @@ const removeEmployee = (index) => {
                                 <Field
                                     :id="'faqs_item_answer_'+index"
                                     type="textarea"
-                                    :rows="3"
+                                    :rows="4"
                                     v-model="form.faqs[index].answer"
                                     :error="form.errors['faqs.' + index + '.answer']"
                                     :label="'Відповідь №'+(index+1)"
@@ -800,7 +800,7 @@ const removeEmployee = (index) => {
                         </div>
                         <div class="relative w-full h-[200px]">
                             <label
-                                :class="['block text-gray-700 font-semibold mb-2', form.errors['employees.' + index + '.image'] ? 'text-red-600' : 'text-gray-700 dark:text-gray-300']">
+                                :class="['block text-gray-700 font-semibold mb-2', form.errors['employees.' + index + '.image'] ? 'text-red-600' : 'text-gray-700 dark:text-gray-700']">
                                 Фото працівника
                             </label>
                             <div class="w-full overflow-hidden rounded-md border border-gray-300"

@@ -91,7 +91,7 @@ watch(filterValues, (newValues) => {
       </div>
       <div v-if="isPanelVisible" class="flex flex-wrap gap-4">
         <div v-for="filter in filters" :key="filter.name" class="flex flex-col">
-          <label :for="filter.name" class="block text-sm font-medium text-gray-700 dark:text-gray-300">{{ filter.label }}</label>
+          <label :for="filter.name" class="block text-sm font-medium text-gray-700 dark:text-gray-700">{{ filter.label }}</label>
           <input
               v-if="filter.type === 'text'"
               :id="filter.name"
@@ -104,7 +104,7 @@ watch(filterValues, (newValues) => {
               v-else-if="filter.type === 'select'"
               :id="filter.name"
               v-model="filterValues[filter.name]"
-              class="py-2 rounded-md px-4 mt-1 block w-full dark:bg-dark-eval-1 dark:text-gray-300 dark:focus:ring-offset-dark-eval-1 focus:ring-offset-2 text-gray-700 bg-gray-100 border border-gray-100 rounded-lg focus:ring-5 focus:ring-indigo-400 focus:outline-none"
+              class="py-2 rounded-md px-4 mt-1 block w-full dark:bg-dark-eval-1 dark:text-gray-700 dark:focus:ring-offset-dark-eval-1 focus:ring-offset-2 text-gray-700 bg-gray-100 border border-gray-100 rounded-lg focus:ring-5 focus:ring-indigo-400 focus:outline-none"
           >
             <option value="">Виберіть</option>
             <option v-for="(option, index) in filter.options" :key="index" :value="index">
@@ -118,7 +118,7 @@ watch(filterValues, (newValues) => {
               v-model="filterValues[filter.name]"
               type="date"
               :placeholder="filter.placeholder || 'Enter text'"
-              class="py-2 rounded-md px-4 mt-1 block w-full dark:bg-dark-eval-1 dark:text-gray-300 dark:focus:ring-offset-dark-eval-1 border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 focus:ring-purple-500 focus:ring-offset-2 focus:ring-offset-white dark:border-gray-600"
+              class="py-2 rounded-md px-4 mt-1 block w-full dark:bg-dark-eval-1 dark:text-gray-700 dark:focus:ring-offset-dark-eval-1 border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 focus:ring-purple-500 focus:ring-offset-2 focus:ring-offset-white dark:border-gray-300"
           />
         </div>
       </div>

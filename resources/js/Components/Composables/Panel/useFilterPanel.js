@@ -17,7 +17,7 @@ export function useFilterPanel(initialFilters, itemName) {
 
     const onFilterChangeAndFetch = (newValues = {}) => {
         filterValues.value = { ...filterValues.value, ...newValues, per_page: perPage.value };
-        router.get(route(itemName + '.index'), filterValues.value, { preserveState: true, preserveScroll: true });
+        router.get(itemName, filterValues.value, { preserveState: true, preserveScroll: true });
     };
     return {
         onFilterChangeAndFetch,
