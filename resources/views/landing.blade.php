@@ -554,7 +554,7 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
                         <div class="u-container-align-left-md u-container-align-left-sm u-container-align-left-xs u-container-style u-layout-cell u-size-40-lg u-size-40-xl u-size-60-md u-size-60-sm u-size-60-xs u-layout-cell-2">
                             <div class="u-border-2 u-border-grey-75 u-container-layout u-container-layout-2">
                                 <div class="u-form u-form-1">
-                                    <form action="https://forms.nicepagesrv.com/v2/form/process" class="u-clearfix u-form-spacing-10 u-form-vertical u-inner-form" source="email" name="form" style="padding: 10px;">
+                                    <form action="/write-message" class="u-clearfix u-form-spacing-10 u-form-vertical u-inner-form" source="email" name="form" style="padding: 10px;">
                                         <div class="u-form-group u-form-name">
                                             <label for="name-175e" class="u-label">Name</label>
                                             <input type="text" placeholder="Enter your Name" id="name-175e" name="name" class="u-border-no-left u-border-no-right u-border-no-top u-input u-input-rectangle" required="">

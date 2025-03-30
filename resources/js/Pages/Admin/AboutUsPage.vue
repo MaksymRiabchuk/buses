@@ -173,6 +173,38 @@ const removeReview = (index) => {
     form.reviews.splice(index, 1);
 }
 
+const handleEmployeeImageUpdate = (event, index) => {
+    const file = event.target.files[0];
+    if (!file) return;
+
+    const reader = new FileReader();
+    reader.onload = (e) => {
+        form.employees[index].image = e.target.result;
+    };
+    reader.readAsDataURL(file);
+};
+
+const triggerEmployeeFileInput = (index) => {
+    document.getElementById(`EmployeeImageFileInput${index}`).click();
+};
+
+const deleteEmployeeImage = (index) => {
+    form.employees[index].image = '';
+};
+
+
+const addEmployee = () => {
+    form.employees.push({
+        id: '',
+        full_name: '',
+        position: '',
+        image: '',
+    })
+}
+
+const removeEmployee = (index) => {
+    form.employees.splice(index, 1);
+}
 
 </script>
 
@@ -194,24 +226,25 @@ const removeReview = (index) => {
                     Блок "Головний"
                 </a>
                 <a @click="currentMainTab = 'reasons'"
-                   :class="{ active: currentMainTab==='reasons','text-red-600':form.errors.sliders}"
+                   :class="{ active: currentMainTab==='reasons','text-red-600':form.errors.reason_title_1||form.errors.reason_title_2
+                ||form.errors.reason_title_3||form.errors.reason_text_1||form.errors.reason_text_3}"
                    class="tab-button border-1 border-gray-400 shadow p-2 text-lg hover:text-gray-600 rounded cursor-pointer">
                     Блок "Чому варто вибирати нас?"
                 </a>
                 <a @click="currentMainTab = 'reviews'" :class="{ active: currentMainTab==='reviews',
-                'text-red-600':form.errors.about_us_text||form.errors.about_us_item_text_1||
-                form.errors.about_us_item_text_2||form.errors.about_us_item_text_3||
-                form.errors.about_us_item_title_1||form.errors.about_us_item_title_2||form.errors.about_us_item_title_3}"
+                'text-red-600':form.errors.reviews}"
                    class="tab-button border-1 border-gray-400 shadow p-2 text-lg hover:text-gray-600 rounded cursor-pointer">
                     Блок "Відгуки клієнтів"
                 </a>
                 <a @click="currentMainTab = 'history'"
-                   :class="{ active: currentMainTab==='history','text-red-600':form.errors.gallery||form.errors.gallery_text }"
+                   :class="{ active: currentMainTab==='history','text-red-600':form.errors.our_history_text||form.errors.our_history_image||
+                form.errors.our_history_title_mark_1||form.errors.our_history_title_mark_2||form.errors.our_history_title_mark_3||
+                form.errors.our_history_title_mark_4||form.errors.our_history_title_mark_5}"
                    class="tab-button border-1 border-gray-400 shadow p-2 text-lg hover:text-gray-600 rounded cursor-pointer">
                     Блок "Історія"
                 </a>
                 <a @click="currentMainTab = 'teams'"
-                   :class="{ active: currentMainTab==='teams','text-red-600':form.errors.employees }"
+                   :class="{ active: currentMainTab==='teams','text-red-600':form.errors.employees}"
                    class="tab-button border-1 border-gray-400 shadow p-2 text-lg hover:text-gray-600 rounded cursor-pointer">
                     Блок "Команда"
                 </a>

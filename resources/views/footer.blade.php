@@ -15,7 +15,7 @@
                     <div class="u-container-align-left-sm u-container-align-left-xs u-container-style u-layout-cell u-size-25-xl u-size-27-lg u-size-60-md u-size-60-sm u-size-60-xs u-layout-cell-3">
                         <div class="u-container-layout u-valign-middle-xl u-container-layout-3">
                             <div class="u-form u-form-1">
-                                <form action="https://forms.nicepagesrv.com/v2/form/process" class="u-clearfix u-form-horizontal u-form-spacing-10 u-inner-form" source="email" name="form" style="padding: 2px;">
+                                <form action="/write-message" class="u-clearfix u-form-horizontal u-form-spacing-10 u-inner-form" source="email" name="form" style="padding: 2px;">
                                     <div class="u-form-email u-form-group u-label-none">
                                         <label for="email-175e" class="u-label">Email</label>
                                         <input type="email" placeholder="Enter a valid email address" id="email-175e" name="email" class="u-border-no-left u-border-no-right u-border-no-top u-input u-input-rectangle u-input-1" required="">

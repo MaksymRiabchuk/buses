@@ -16,22 +16,31 @@ const toggleSubmenu = () => {
                     <li>
                         <Link :href="'/admin/main_page/1/edit'"
                               class="block px-4 py-2 rounded hover:bg-gray-700">
-                            <!--                  :class="route().current('main_page.*')?'menu-label-active':''"-->
                             Головна сторінка
                         </Link>
                     </li>
                     <li>
                         <Link :href="'/admin/params'"
                               class="block px-4 py-2 rounded hover:bg-gray-700">
-                            <!--                  :class="route().current('main_page.*')?'menu-label-active':''"-->
                             Параметри
                         </Link>
                     </li>
                     <li>
                         <Link :href="'/admin/about_us/1/edit'"
                               class="block px-4 py-2 rounded hover:bg-gray-700">
-                            <!--                  :class="route().current('main_page.*')?'menu-label-active':''"-->
                             Про нас
+                        </Link>
+                    </li>
+                    <li>
+                        <Link :href="'/admin/messages'"
+                              class="block px-4 py-2 rounded hover:bg-gray-700">
+                            Повідомлення
+                        </Link>
+                    </li>
+                    <li>
+                        <Link :href="'/admin/our_team/1/edit'"
+                              class="block px-4 py-2 rounded hover:bg-gray-700">
+                            Наша команда
                         </Link>
                     </li>
                     <li>
