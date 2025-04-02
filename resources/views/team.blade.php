@@ -5,6 +5,7 @@
 @endpush
 
 @push('scripts')
+    <script type="text/javascript" src="{{ asset('write_us_form.js') }}"></script>
     <script type="text/javascript" src="{{ asset('jquery.js') }}"></script>
     <script type="text/javascript" src="{{ asset('nicepage.js') }}"></script>
 @endpush
@@ -86,17 +87,16 @@
                             <div class="u-container-layout u-container-layout-2">
                                 <div class="u-form u-form-1">
                                     <form method="POST" action="/write-message"
-                                          class="u-clearfix u-form-spacing-10 u-form-vertical u-inner-form" name="form"
+                                          class="u-clearfix u-form-spacing-10 u-form-vertical u-inner-form"
+                                          name="form_write_us"
                                           style="padding: 10px;">
                                         @csrf
                                         <div class="u-form-group u-form-name">
                                             <label for="name-175e" class="u-label">Імʼя</label>
-                                            <input type="text" placeholder="Введіть своє імʼя" id="name-175e" name="name"
+                                            <input type="text" placeholder="Введіть своє імʼя" id="name-175e"
+                                                   name="name"
                                                    class="u-border-no-left u-border-no-right u-border-no-top u-input u-input-rectangle"
                                                    required="">
-                                            @error('name')
-                                                <span style="color:red"> Це поле обовʼязкове </span>
-                                            @enderror
                                         </div>
                                         <div class="u-form-email u-form-group">
                                             <label for="email-175e" class="u-label">Електронна пошта</label>
@@ -104,9 +104,13 @@
                                                    id="email-175e" name="email"
                                                    class="u-border-no-left u-border-no-right u-border-no-top u-input u-input-rectangle"
                                                    required="">
-                                            @error('email')
-                                                <span style="color:red"> Це поле обовʼязкове </span>
-                                            @enderror
+                                        </div>
+                                        <div class="u-form-email u-form-group">
+                                            <label for="email-175e" class="u-label">Номер телефону</label>
+                                            <input type="text" placeholder="+380 98 765 4321"
+                                                   id="email-175e" name="phone"
+                                                   class="u-border-no-left u-border-no-right u-border-no-top u-input u-input-rectangle"
+                                                   required="">
                                         </div>
                                         <div class="u-form-group u-form-message">
                                             <label for="message-175e" class="u-label">Message</label>
@@ -114,9 +118,6 @@
                                                       id="message-175e" name="message"
                                                       class="u-border-no-left u-border-no-right u-border-no-top u-input u-input-rectangle"
                                                       required=""></textarea>
-                                            @error('message')
-                                                <span style="color:red"> Це поле обовʼязкове </span>
-                                            @enderror
                                         </div>
                                         <div class="u-align-right u-form-group u-form-submit">
                                             <a href="#" class="u-border-none u-btn u-btn-submit u-button-style u-btn-2">Відправити

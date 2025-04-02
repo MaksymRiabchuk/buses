@@ -32,6 +32,7 @@ const form = useForm({
     id: "",
     name: "",
     email: "",
+    phone: "",
     message: "",
 });
 
@@ -40,6 +41,7 @@ onMounted(() => {
         form.id = props.item.id;
         form.name = props.item.name;
         form.email = props.item.email;
+        form.phone = props.item.phone;
         form.message = props.item.message;
     }
 });
@@ -71,17 +73,24 @@ watch(() => form.errors, (newErrors) => {
         </Link>
         <form @submit.prevent="submit" class="mt-6 space-y-6">
             <div class="space-y-4">
-                <div class="flex">
+                <div class="flex w-full">
                     <Field id="name" type="text" v-model="form.name" :error="form.errors.name"
                            label="Ім'я" class="w-full" :max="128" :disabled="true"
                            :required="true"/>
                 </div>
                 <div class="flex">
-                    <Field id="value" type="text" v-model="form.email" :error="form.errors.email"
-                           label="Ел. пошта" class="w-full" :max="128" :disabled="true"
-                           :required="true"/>
+                    <div class="flex" style="width: 49%; margin-right: 1%">
+                        <Field id="value" type="text" v-model="form.email" :error="form.errors.email"
+                               label="Ел. пошта" class="w-full" :max="128" :disabled="true"
+                               :required="true"/>
+                    </div>
+                    <div class="flex" style="width: 50%">
+                        <Field id="value" type="text" v-model="form.phone" :error="form.errors.phone"
+                               label="Мобільний телефон" class="w-full" :max="128" :disabled="true"
+                               :required="true"/>
+                    </div>
                 </div>
-                <div class="flex">
+                <div class="flex w-full">
                     <Field id="value" type="textarea" v-model="form.message" :error="form.errors.message"
                            label="Повідомлення" class="w-full" :max="128" :disabled="true"
                            :required="true"/>

@@ -45,7 +45,7 @@ const props = defineProps({
         default: 10
     }
 });
-const headers = ["Ім'я", "Прізвище", "Повідомлення","Дії"];
+const headers = ["Ім'я", "Ел. пошта", "Телефон", "Повідомлення", "Дії"];
 
 const {deleteItem} = useCrudIndex(itemName);
 
@@ -85,6 +85,7 @@ perPage.value = props.perPage;
 
                     <td class="px-6 py-4 whitespace-nowrap">{{ item.name }}</td>
                     <td class="px-6 py-4 whitespace-nowrap">{{ item.email }}</td>
+                    <td class="px-6 py-4 whitespace-nowrap">{{ item.phone }}</td>
                     <td class="px-6 py-4 whitespace-nowrap">{{ item.message }}</td>
                     <td class="text-right">
                         <Link :href="`${itemName}/${item.id}/edit`" class="mr-2">

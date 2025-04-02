@@ -22,9 +22,20 @@ class WriteMessageRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'name'=>'required|string',
-            'email'=>'required|email',
-            'message'=>'required|string',
+            'name' => 'required|string',
+            'email' => 'nullable|email|required_without:phone',
+            'phone' => [
+                'nullable',
+                'regex:/^\+380\d{9}$/',
+                'required_without:email'
+            ],
+            'message' => 'required|string',
+        ];
+    }
+
+    public function messages(): array{
+        return [
+            'phone.regex' => 'Номер телефону повинен починатися з +380 і містити 9 цифр після коду країни.',
         ];
     }
 }

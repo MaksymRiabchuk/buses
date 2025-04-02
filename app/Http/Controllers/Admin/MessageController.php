@@ -24,6 +24,7 @@ class MessageController extends Controller
         return [
             ['name' => 'name', 'searchType' => "%", 'label' => __('Імʼя'), 'type' => 'text', 'placeholder' => __('Oleksiy')],
             ['name' => 'email', 'searchType' => "%", 'label' => __('Ел. пошта'), 'type' => 'text', 'placeholder' => __('example@gmail.com')],
+            ['name' => 'phone', 'searchType' => "%", 'label' => __('Мобільний телефон'), 'type' => 'text', 'placeholder' => __('+38 098 765 4321')],
             ['name' => 'message', 'searchType' => "%", 'label' => __('Повідомлення'), 'type' => 'text', 'placeholder' => __('Some text here')],
         ];
     }
@@ -61,6 +62,7 @@ class MessageController extends Controller
         }
         return $only;
     }
+
     public function edit($id)
     {
         $model = self::MODEL;
