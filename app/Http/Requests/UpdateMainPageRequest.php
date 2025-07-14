@@ -39,6 +39,7 @@ class UpdateMainPageRequest extends FormRequest
             'gallery' => 'required|array',
             'gallery.*.title' => 'required|string|max:32',
             'gallery.*.image' => 'required|string',
+            'gallery.*.previewImage' => 'required_if:gallery.*.video,true',
 
             'faqs_text' => 'required|string',
 
@@ -94,6 +95,7 @@ class UpdateMainPageRequest extends FormRequest
             'gallery.*.title.required' => 'Це поле не може бути пустим',
             'gallery.*.title.max' => 'Це поле повинно містити менше ніж 32 символи',
             'gallery.*.image.required' => 'Це поле не може бути пустим',
+            'gallery.*.previewImage' => 'Для завантажити відео також потрібно завантажити початкове фото',
 
             'faqs.required' => 'Це поле не може бути пустим',
             'faqs.*.question.required' => 'Це поле не може бути пустим',

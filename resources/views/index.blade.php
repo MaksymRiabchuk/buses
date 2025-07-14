@@ -2,12 +2,14 @@
 @push('styles')
     <link rel="stylesheet" href="{{ asset('index.css') }}">
     <link rel="stylesheet" href="{{ asset('nicepage.css') }}">
+    <link href="https://vjs.zencdn.net/8.22.0/video-js.css" rel="stylesheet"/>
 @endpush
 
 @push('scripts')
-        <script type="text/javascript" src="{{ asset('write_us_form.js') }}"></script>
-        <script type="text/javascript" src="{{ asset('jquery.js') }}"></script>
-        <script type="text/javascript" src="{{ asset('nicepage.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('write_us_form.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('jquery.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('nicepage.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('video_controls.js') }}"></script>
 @endpush
 @section('content')
     <section class="u-clearfix u-container-align-center-xs u-palette-1-light-3 u-section-1" id="carousel_8fae">
@@ -160,21 +162,68 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
             <div class="u-expanded-width u-list u-list-1">
                 <div class="u-repeater u-repeater-1">
                     @foreach($mainPage['gallery'] as $gallery)
-                        <div
-                            class="u-align-center u-container-align-center u-container-align-center-xs u-container-style u-image u-image-default u-list-item u-repeater-item u-shape-round u-image-1"
-                            style="background-image: url('storage/main/{{$gallery['image']}}')"
-                            data-animation-name="customAnimationIn" data-animation-duration="1500"
-                            data-animation-delay="500"
-                            data-image-width="1380" data-image-height="918">
-                            <div class="u-container-layout u-similar-container u-valign-bottom u-container-layout-1">
+                        @if(str_contains($gallery['image'],".mp4"))
+                            <div
+                                class="u-align-center u-container-align-center u-container-align-center-xs u-container-style u-image u-image-default u-list-item u-repeater-item u-shape-round u-image-1"
+                                data-animation-name="customAnimationIn" data-animation-duration="1500"
+                                data-animation-delay="500"
+                                data-image-width="1380" data-image-height="918">
                                 <div
-                                    class="u-black u-container-align-center u-container-style u-expanded-width u-group u-opacity u-opacity-65 u-group-1">
-                                    <div class="u-container-layout u-valign-middle u-container-layout-2">
-                                        <h6 class="u-align-center u-hover-feature u-text u-text-3"> {{$gallery['title']}}</h6>
+                                    class="u-container-layout u-similar-container u-valign-bottom u-container-layout-1">
+                                    <div class="video-wrapper" style="height: 100%">
+                                        <video
+                                            id="my-video-{{$loop->index}}"
+                                            class="video-js"
+                                            preload="auto"
+                                            poster="/storage/main/{{$gallery['previewImage']}}"
+                                        >
+                                            <source src="/storage/main/{{$gallery['image']}}" type="video/mp4"/>
+                                        </video>
+                                        <div class="video-controls">
+                                            <button id="video-play-button-{{$loop->index}}" onclick="playVideo({{$loop->index}})"><i class="fa-solid fa-play"></i></button>
+                                            <button style="display: none" id="video-pause-button-{{$loop->index}}" onclick="pauseVideo({{$loop->index}})"><i class="fa-solid fa-circle-pause"></i></button>
+
+                                            <input type="range" min="0" max="100" value="0"
+                                                   id="seek-{{$loop->index}}"
+                                                   onchange="seekVideo({{$loop->index}})">
+                                            <div class="volume-container" id="volumeContainer-{{$loop->index}}"
+                                                 onmouseover="showVolumeBar({{$loop->index}})"
+                                                 onmouseleave="hideVolumeBar({{$loop->index}})">
+                                                <i class="fa-solid fa-volume-high"></i>
+                                                <input type="range" min="0" max="1" step="0.01" value="1"
+                                                       id="volume-{{$loop->index}}"
+                                                       class="volume-bar"
+                                                       onchange="changeVolume({{$loop->index}})">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="u-black u-container-align-center u-container-style u-expanded-width u-group u-opacity u-opacity-65 u-group-1">
+                                        <div class="u-container-layout u-valign-middle u-container-layout-2">
+                                            <h6 class="u-align-center u-hover-feature u-text u-text-3"> {{$gallery['title']}}</h6>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        @else
+                            <div
+                                class="u-align-center u-container-align-center u-container-align-center-xs u-container-style u-image u-image-default u-list-item u-repeater-item u-shape-round u-image-1"
+                                style="background-image: url('storage/main/{{$gallery['image']}}')"
+                                data-animation-name="customAnimationIn" data-animation-duration="1500"
+                                data-animation-delay="500"
+                                data-image-width="1380" data-image-height="918">
+                                <div
+                                    class="u-container-layout u-similar-container u-valign-bottom u-container-layout-1">
+                                    <div
+                                        class="u-black u-container-align-center u-container-style u-expanded-width u-group u-opacity u-opacity-65 u-group-1">
+                                        <div class="u-container-layout u-valign-middle u-container-layout-2">
+                                            <h6 class="u-align-center u-hover-feature u-text u-text-3"> {{$gallery['title']}}</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        @endif
+
                     @endforeach
                 </div>
             </div>
@@ -287,7 +336,8 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
                                      data-animation-name="customAnimationIn"
                                      data-animation-duration="1250" data-animation-delay="250">
                                 <h4 class="u-align-center u-text u-text-default u-text-2" data-animation-name=""
-                                    data-animation-duration="0" data-animation-delay="0" data-animation-direction="">{{$employee['full_name']}}</h4>
+                                    data-animation-duration="0" data-animation-delay="0"
+                                    data-animation-direction="">{{$employee['full_name']}}</h4>
                                 <p class="u-align-center u-large-text u-text u-text-default u-text-variant u-text-3">
                                     {{$employee['position']}}</p>
                             </div>
@@ -541,5 +591,144 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
             </div>
         </div>
     </section>
+    <style>
+        .video-wrapper {
+            position: relative;
+            width: 100%;
+            height: auto;
+            overflow: hidden;
+        }
+
+        .video-wrapper video {
+            object-fit: cover;
+            width: 100%;
+            padding-top: 78px;
+            height: 100%;
+            display: block;
+        }
+
+        .video-controls {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            display: flex;
+            justify-content: space-around;
+            gap: 10px;
+            padding: 10px;
+        }
+
+        .video-controls {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            display: flex;
+            align-items: center;
+            padding: 8px 10px;
+            gap: 10px;
+            box-sizing: border-box;
+        }
+
+        .video-controls button {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        .video-controls input[type="range"] {
+            appearance: none;
+            height: 4px;
+            background: #ccc;
+            border-radius: 2px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        .video-controls input[type="range"]:focus {
+            outline: none;
+        }
+
+        .video-controls input[type="range"]::-webkit-slider-thumb {
+            appearance: none;
+            width: 14px;
+            height: 14px;
+            background: white;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        .video-controls input[type="range"]::-moz-range-thumb {
+            width: 14px;
+            height: 14px;
+            background: white;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        .video-controls input[type="range"]:hover {
+            background: #aaa;
+        }
+
+        .volume-container {
+            position: relative;
+            display: inline-block;
+        }
+
+        .volume-container i {
+            color: white;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        .volume-container input[type="range"] {
+            position: absolute;
+            bottom: 55px;
+            left: 50%;
+            transform: translateX(-50%) rotate(-90deg);
+            width: 80px;
+            visibility: hidden;
+            opacity: 0;
+            appearance: none;
+            height: 8px;
+            background: #ccc;
+            border-radius: 2px;
+            cursor: pointer;
+            z-index: 10;
+        }
+
+        .volume-container:hover input[type="range"] {
+            visibility: visible;
+            opacity: 1;
+        }
+        .volume-bar{
+            width: 50px;
+        }
+
+        .volume-container input[type="range"]::-webkit-slider-thumb {
+            appearance: none;
+            width: 14px;
+            height: 14px;
+            background: white;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        .volume-container input[type="range"]::-moz-range-thumb {
+            width: 14px;
+            height: 14px;
+            background: white;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+
+    </style>
 
 @endsection

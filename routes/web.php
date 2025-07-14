@@ -6,16 +6,16 @@ use App\Http\Controllers\Admin\MessageController;
 use App\Http\Controllers\Admin\OurTeamPageController;
 use App\Http\Controllers\Admin\ParamController;
 use App\Http\Controllers\MainController;
+use App\Http\Middleware\AuthMiddleware;
+use App\Http\Middleware\LoginHandleMiddleware;
 use Illuminate\Support\Facades\Route;
 
-Route::prefix('admin')->group(function () {
-    Route::get('/', [\App\Http\Controllers\Admin\MainPageController::class, 'edit']);
+Route::prefix('admin')->middleware(AuthMiddleware::class)->group(function () {
+    Route::get('/', [MainPageController::class, 'edit']);
 
+    Route::get(MainPageController::ROUTE_SEGMENT.'/{main_page}/edit', [MainPageController::class, 'edit'])->name('main_page.edit');
+    Route::post(MainPageController::ROUTE_SEGMENT.'/{main_page}', [MainPageController::class, 'update'])->name('main_page.update');
 
-    Route::resource(MainPageController::ROUTE_SEGMENT, MainPageController::class)->names([
-        'edit' => MainPageController::ROUTE_SEGMENT . '.edit',
-        'update' => MainPageController::ROUTE_SEGMENT . '.update',
-    ]);
     Route::resource(AboutUsPageController::ROUTE_SEGMENT, AboutUsPageController::class)->names([
         'edit' => AboutUsPageController::ROUTE_SEGMENT . '.edit',
         'update' => AboutUsPageController::ROUTE_SEGMENT . '.update',
@@ -41,7 +41,11 @@ Route::prefix('admin')->group(function () {
     ]);
 });
 
-Route::get('/', [MainController::class, 'index']);
+Route::get('/login',[MainController::class,'login'])->name('login');
+Route::post('/login',[MainController::class,'logInAttempt']);
+Route::post('/logout',[MainController::class,'logout'])->name('logout');
+
+Route::get('/', [MainController::class, 'index'])->name('main');
 Route::get('/about-us', [MainController::class, 'aboutUs']);
 Route::get('/team', [MainController::class, 'team']);
 Route::get('/pricing', [MainController::class, 'pricing']);

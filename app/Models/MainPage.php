@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Http\UploadedFile;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 use Intervention\Image\Laravel\Facades\Image;
@@ -27,24 +28,31 @@ class MainPage extends Model
         'team_member_image_2', 'team_member_image_3', 'team_member_image_4', 'team_member_image_5', 'team_member_image_6',];
     public $table = 'main_page';
 
-    public static function processImage($imageData, $key): string
+    public static function processImage(UploadedFile $imageFile, $key): string
     {
-        if (preg_match('/^data:(image\/(\w+));base64,(.+)$/', $imageData, $matches)) {
-            $extension = $matches[2];
-            $imageData = base64_decode($matches[3]);
-            $fileName = $key . '_' . Str::uuid();
-            $imageName = '/main/' . $fileName . '.' . $extension;
-            Storage::disk('public')->put($imageName, $imageData);
-            if (!Storage::disk('public')->exists($imageName)) {
-                return false;
-            }
-            $url = Storage::disk('public')->path($imageName);
-            $image = Image::read($url);
-            Storage::disk('public')->delete($imageName);
-            $image->toWebp();
-            $image->save(Storage::disk('public')->path('main/' . $fileName . '.webp'), 72);
-            return $fileName . '.webp';
-        }
-        return $imageData;
+        $extension = $imageFile->getClientOriginalExtension();
+        $fileName = $key . '_' . Str::uuid();
+        $tempPath = Storage::disk('public')->path('main/' . $fileName . '.' . $extension);
+        $imageFile->move(dirname($tempPath), basename($tempPath));
+        $image = Image::read($tempPath);
+        Storage::disk('public')->delete('main/' . $fileName . '.' . $extension);
+        $image->toWebp();
+        $image->save(Storage::disk('public')->path('main/' . $fileName . '.webp'), 72);
+
+        return $fileName . '.webp';
     }
+
+    public static function processVideo(UploadedFile $videoFile, $key): string
+    {
+        $extension = $videoFile->getClientOriginalExtension();
+        $fileName = $key . '_' . Str::uuid() . '.' . $extension;
+        $videoPath = 'main/' . $fileName;
+        Storage::disk('public')->putFileAs('main', $videoFile, $fileName);
+        if (!Storage::disk('public')->exists($videoPath)) {
+            return false;
+        }
+
+        return $fileName;
+    }
+
 }

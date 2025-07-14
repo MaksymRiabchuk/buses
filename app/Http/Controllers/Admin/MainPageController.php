@@ -4,13 +4,17 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\UpdateMainPageRequest;
-use App\Models\Blog;
 use App\Models\Employee;
 use App\Models\Faq;
 use App\Models\Gallery;
 use App\Models\MainPage;
 use App\Models\Slider;
+use Illuminate\Support\Arr;
+use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Str;
 use Inertia\Inertia;
+use Illuminate\Support\Facades\Auth;
+use Intervention\Image\Laravel\Facades\Image;
 
 class MainPageController extends Controller
 {
@@ -24,11 +28,7 @@ class MainPageController extends Controller
      */
     public function index()
     {
-        $folderName = self::FOLDER_NAME;
 
-        return Inertia::render("$folderName/Index", [
-            'items' => [],
-        ]);
     }
 
     /**
@@ -41,7 +41,12 @@ class MainPageController extends Controller
         $item = $model::findOrFail(1);
 
         $item['sliders'] = Slider::all()->toArray();
-        $item['gallery'] = Gallery::all()->toArray();
+        $galleryItems = Gallery::all()->toArray();
+        $galleryItems = Arr::map($galleryItems, function ($item) {
+            $item['video'] = str_contains($item['image'], '.mp4');
+            return $item;
+        });
+        $item['gallery'] = $galleryItems;
         $item['faqs'] = Faq::all()->toArray();
         $item['employees'] = Employee::all()->toArray();
 
@@ -59,8 +64,8 @@ class MainPageController extends Controller
         $model = self::MODEL;
         $routeSegment = self::ROUTE_SEGMENT;
         $data = $request->all();
-        if (preg_match('/^data:(image\/(\w+));base64,(.+)$/', $data['first_main_image'])) {
-            $data['first_main_image'] = MainPage::processImage($data['first_main_image'], 1);
+        if (isset($data['first_main_image_file']) && $data['first_main_image_file']) {
+            $data['first_main_image'] = MainPage::processImage($data['first_main_image_file'], 1);
         }
         Slider::all()->each(function (Slider $slider) {
             $slider->delete();
@@ -68,8 +73,8 @@ class MainPageController extends Controller
         foreach ($data['sliders'] as $key => $value) {
             if (!Slider::where('id', $value['id'])->exists()) {
                 $slider = new Slider();
-                if (preg_match('/^data:(image\/(\w+));base64,(.+)$/', $value['image'])) {
-                    $value['image'] = MainPage::processImage($value['image'], $key);
+                if (isset($value['imageFile']) && $value['imageFile']) {
+                    $value['image'] = MainPage::processImage($value['imageFile'], $key);
                 }
                 $slider->fill($value);
                 $slider->save();
@@ -82,8 +87,14 @@ class MainPageController extends Controller
         foreach ($data['gallery'] as $key => $value) {
             if (!Gallery::where('id', $value['id'])->exists()) {
                 $gallery = new Gallery();
-                if (preg_match('/^data:(image\/(\w+));base64,(.+)$/', $value['image'])) {
-                    $value['image'] = MainPage::processImage($value['image'], $key);
+                if (isset($value['videoFile']) && $value['videoFile']) {
+                    $value['image'] = MainPage::processVideo($value['videoFile'], $key);
+                }
+                if(isset($value['previewImageFile']) && $value['previewImageFile']){
+                    $value['previewImage'] = MainPage::processImage($value['previewImageFile'], $key);
+                }
+                if (isset($value['imageFile']) && $value['imageFile']) {
+                    $value['image'] = MainPage::processImage($value['imageFile'], $key);
                 }
                 $gallery->fill($value);
                 $gallery->save();
@@ -107,8 +118,8 @@ class MainPageController extends Controller
         foreach ($data['employees'] as $key => $value) {
             if (!Employee::where('id', $value['id'])->exists()) {
                 $employee = new Employee();
-                if (preg_match('/^data:(image\/(\w+));base64,(.+)$/', $value['image'])) {
-                    $value['image'] = MainPage::processImage($value['image'], $key);
+                if (isset($value['imageFile']) && $value['imageFile']) {
+                    $value['image'] = MainPage::processImage($value['imageFile'], $key);
                 }
                 $employee->fill($value);
                 $employee->save();

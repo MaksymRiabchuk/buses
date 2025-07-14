@@ -6,6 +6,13 @@ const isSubmenuOpen = ref(false);
 const toggleSubmenu = () => {
     isSubmenuOpen.value = !isSubmenuOpen.value;
 };
+
+const logout = ()=>{
+    axios.post('/logout')
+        .then(() => {
+            window.location.href = '/';
+        });
+}
 </script>
 
 <template>
@@ -125,6 +132,12 @@ const toggleSubmenu = () => {
                 </ul>
             </aside>
             <main class="p-4 flex-1 bg-gray-100">
+                <header class="w-full flex justify-end p-2 overflow-hidden bg-white rounded-md shadow-md mb-4">
+                    <span class="bg-purple-500 text-white hover:bg-purple-600 focus:ring-purple-500 py-2 px-4 cursor-pointer rounded-md" @click="logout">
+                        <i class="fa-solid fa-right-from-bracket"></i>
+                        Вихід
+                    </span>
+                </header>
                 <slot/>
             </main>
         </div>

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\LogInRequest;
 use App\Http\Requests\WriteMessageRequest;
 use App\Models\AboutUsPage;
 use App\Models\Employee;
@@ -13,6 +14,9 @@ use App\Models\OurTeam;
 use App\Models\Param;
 use App\Models\Review;
 use App\Models\Slider;
+use Illuminate\Http\Request;
+use Inertia\Inertia;
+use Illuminate\Support\Facades\Auth;
 
 class MainController extends Controller
 {
@@ -66,6 +70,12 @@ class MainController extends Controller
         return view('landing');
     }
 
+    public function login()
+    {
+        return Inertia::render("Admin/Login", [
+        ]);
+    }
+
     public function writeMessage(WriteMessageRequest $request)
     {
         $data = $request->validated();
@@ -74,4 +84,26 @@ class MainController extends Controller
         $message->save();
         return response()->json(['success' => true]);
     }
+
+    public function logInAttempt(LogInRequest $request)
+    {
+        $credentials = $request->validated();
+        $user = Auth::attempt($credentials);
+        if (!$user) {
+            return redirect()->route("login")->with('danger', __('Неправильні дані.'));
+        }
+
+        $request->session()->regenerate();
+
+        return redirect()->route("main_page.edit",1)->with('success', __('Вхід успішний.'));
+    }
+    public function logout(Request $request)
+    {
+        Auth::logout();
+        $request->session()->invalidate();
+        $request->session()->regenerateToken();
+        return redirect()->route("main");
+    }
+
+
 }
