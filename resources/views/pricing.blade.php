@@ -9,16 +9,50 @@
     <script type="text/javascript" src="{{ asset('nicepage.js') }}"></script>
 @endpush
 @section('content')
-    <section class="u-clearfix u-palette-1-light-3 u-section-1" id="carousel_8fae">
-        <div class="u-expanded-width u-palette-1-light-2 u-shape u-shape-rectangle u-shape-1" data-animation-name="flipIn" data-animation-duration="1000" data-animation-delay="500" data-animation-direction="X"></div>
-        <img src="storage/images/hand-car-mechanic-with-wrench-auto-repair-garage87.jpg" alt="" class="u-image u-image-default u-image-1" data-image-width="1200" data-image-height="801" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="0">
-        <div class="custom-expanded u-container-align-left u-container-style u-group u-white u-group-1" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="800" data-animation-direction="X">
-            <div class="u-container-layout u-valign-middle u-container-layout-1">
-                <h2 class="u-align-left u-text u-text-1">Our Pricing<br>
-                </h2>
-                <p class="u-align-left u-text u-text-2" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction=""> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident </p>
-                <a href="#" class="u-active-palette-5-dark-3 u-align-left u-border-none u-btn u-btn-round u-button-style u-hover-palette-5-dark-3 u-palette-1-base u-radius-2 u-text-active-white u-text-hover-white u-btn-1">Learn more </a>
-            </div>
+    <section class="u-align-center u-clearfix u-container-align-center u-palette-1-light-3 u-section-3" id="carousel_bc3e">
+        <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+            <h2 class="u-align-center u-text u-text-default u-text-1" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="0"> Ціни</h2>
+            <p class="u-align-center u-large-text u-text u-text-variant" style="margin-top: 0px;margin-bottom: 0px" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="0">
+                Ми дбаємо про те, щоб якісні перевезення були доступні для кожного.
+            </p>
+            <p class="u-align-center u-large-text u-text u-text-variant" style="margin-top: 0px;margin-bottom: 0px" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="0">
+                Гнучка система цін залежно від маршруту та потреб клієнта.
+            </p>
+            <p class="u-align-center u-large-text u-text u-text-variant" style="margin-top: 0px;margin-bottom: 0px" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="0">
+                Тури "під ключ" – без зайвого клопоту: транспорт, проживання, харчування, екскурсії.
+            </p>
+            <p class="u-align-center u-large-text u-text u-text-variant" style="margin-top: 0px;margin-bottom: 0px" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="0">
+                Доступні пропозиції як для невеликих груп, так і для великих організацій.
+            </p>
+            <p class="u-align-center u-large-text u-text u-text-variant" style="margin-top: 0px;margin-bottom: 0px" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="0">
+                Подорож у будь-яку країну Європи (а при потребі – ще далі).
+            </p>
+            <p class="u-align-center u-large-text u-text u-text-variant" style="margin-top: 0px;margin-bottom: 0px" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="0">
+                З нами вигідно подорожувати – бо ми цінуємо кожного клієнта.
+            </p>
+        </div>
+    </section>
+    <section class="u-align-center u-clearfix u-container-align-center u-palette-1-light-3 u-section-3" id="carousel_bc3e">
+        <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+            <h2 class="u-align-center u-text u-text-default u-text-1" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="0"> Послуги</h2>
+            <p class="u-align-center u-large-text u-text u-text-variant" style="margin-top: 0px;margin-bottom: 0px" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="0">
+                Туристичні автобусні перевезення Україною та Європою.
+            </p>
+            <p class="u-align-center u-large-text u-text u-text-variant" style="margin-top: 0px;margin-bottom: 0px" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="0">
+                Міжнародні та міжміські групові поїздки.
+            </p>
+            <p class="u-align-center u-large-text u-text u-text-variant" style="margin-top: 0px;margin-bottom: 0px" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="0">
+                Організація шкільних турів, корпоративних заходів, весільних перевезень.
+            </p>
+            <p class="u-align-center u-large-text u-text u-text-variant" style="margin-top: 0px;margin-bottom: 0px" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="0">
+                Тури "під ключ": транспорт + харчування + проживання + екскурсії.
+            </p>
+            <p class="u-align-center u-large-text u-text u-text-variant" style="margin-top: 0px;margin-bottom: 0px" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="0">
+                Оренда автобусів під замовлення для будь-яких подій.
+            </p>
+            <p class="u-align-center u-large-text u-text u-text-variant" style="margin-top: 0px;margin-bottom: 0px" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="0">
+                Технічний супровід та консультації при складанні маршруту.
+            </p>
         </div>
     </section>
     <section class="u-align-left u-clearfix u-container-align-left u-section-2" id="carousel_ead7">
@@ -110,47 +144,65 @@
             <a href="#" class="u-active-palette-5-dark-3 u-align-left u-border-none u-btn u-btn-round u-button-style u-hover-palette-5-dark-3 u-palette-1-base u-radius u-text-active-white u-text-hover-white u-btn-9" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="">Learn more </a>
         </div>
     </section>
-    <section class="u-align-center u-clearfix u-container-align-center u-palette-1-light-3 u-section-3" id="carousel_bc3e">
-        <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
-            <h2 class="u-align-center u-text u-text-default u-text-1" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="0"> Schedule Your Appointment Today</h2>
-            <p class="u-align-center u-large-text u-text u-text-variant u-text-2" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="0"> Your Automotive Repair &amp; Maintenance Service Specialist </p>
-            <a href="#" class="u-active-palette-5-dark-3 u-align-center u-border-none u-btn u-btn-round u-button-style u-hover-palette-5-dark-3 u-palette-1-base u-radius-2 u-text-active-white u-text-hover-white u-btn-1" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="500">Learn more </a>
-        </div>
-    </section>
-    <section class="u-clearfix u-section-4" id="carousel_9629">
+
+    <section class="u-clearfix u-section-10" id="carousel_9629">
         <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
             <div class="data-layout-selected u-clearfix u-expanded-width u-layout-wrap u-layout-wrap-1">
                 <div class="u-layout">
                     <div class="u-layout-row">
                         <div class="u-container-style u-layout-cell u-size-20 u-layout-cell-1">
                             <div class="u-container-layout u-container-layout-1">
-                                <h2 class="u-text u-text-default u-text-1">Write Us</h2>
-                                <p class="u-align-left u-text u-text-2">Images from <a href="https://www.freepik.com" class="u-active-none u-border-1 u-border-active-palette-1-base u-border-black u-border-hover-palette-1-base u-border-no-left u-border-no-right u-border-no-top u-bottom-left-radius-0 u-bottom-right-radius-0 u-btn u-button-link u-button-style u-hover-none u-none u-radius-0 u-text-body-color u-top-left-radius-0 u-top-right-radius-0 u-btn-1" target="_blank">Freepik</a>
-                                </p>
+                                <h2 class="u-text u-text-default u-text-1">Напишіть нам</h2>
+
                             </div>
                         </div>
                         <div class="u-container-style u-layout-cell u-size-40 u-layout-cell-2">
                             <div class="u-container-layout u-container-layout-2">
                                 <div class="u-form u-form-1">
-                                    <form action="/write-message" class="u-clearfix u-form-spacing-10 u-form-vertical u-inner-form" source="email" name="form" style="padding: 10px;">
+                                    <form method="POST" action="/write-message"
+                                          class="u-clearfix u-form-spacing-10 u-form-vertical u-inner-form"
+                                          name="form_write_us"
+                                          style="padding: 10px;">
+                                        @csrf
                                         <div class="u-form-group u-form-name">
-                                            <label for="name-175e" class="u-label">Name</label>
-                                            <input type="text" placeholder="Enter your Name" id="name-175e" name="name" class="u-border-no-left u-border-no-right u-border-no-top u-input u-input-rectangle" required="">
+                                            <label for="name-175e" class="u-label">Імʼя</label>
+                                            <input type="text" placeholder="Введіть своє імʼя" id="name-175e"
+                                                   name="name"
+                                                   class="u-border-no-left u-border-no-right u-border-no-top u-input u-input-rectangle"
+                                                   required="">
                                         </div>
                                         <div class="u-form-email u-form-group">
-                                            <label for="email-175e" class="u-label">Email</label>
-                                            <input type="email" placeholder="Enter a valid email address" id="email-175e" name="email" class="u-border-no-left u-border-no-right u-border-no-top u-input u-input-rectangle" required="">
+                                            <label for="email-175e" class="u-label">Електронна пошта</label>
+                                            <input type="email" placeholder="Введіть свою електронну пошту"
+                                                   id="email-175e" name="email"
+                                                   class="u-border-no-left u-border-no-right u-border-no-top u-input u-input-rectangle"
+                                                   required="">
+                                        </div>
+                                        <div class="u-form-email u-form-group">
+                                            <label for="email-175e" class="u-label">Номер телефону</label>
+                                            <input type="text" placeholder="+380 98 765 4321"
+                                                   id="email-175e" name="phone"
+                                                   class="u-border-no-left u-border-no-right u-border-no-top u-input u-input-rectangle"
+                                                   required="">
                                         </div>
                                         <div class="u-form-group u-form-message">
-                                            <label for="message-175e" class="u-label">Message</label>
-                                            <textarea placeholder="Enter your message" rows="4" cols="50" id="message-175e" name="message" class="u-border-no-left u-border-no-right u-border-no-top u-input u-input-rectangle" required=""></textarea>
+                                            <label for="message-175e" class="u-label">Повідомлення</label>
+                                            <textarea placeholder="Введіть своє повідомлення" rows="4" cols="50"
+                                                      id="message-175e" name="message"
+                                                      class="u-border-no-left u-border-no-right u-border-no-top u-input u-input-rectangle"
+                                                      required=""></textarea>
                                         </div>
                                         <div class="u-align-right u-form-group u-form-submit">
-                                            <a href="#" class="u-border-none u-btn u-btn-submit u-button-style u-btn-2">send a message</a>
+                                            <a href="#" class="u-border-none u-btn u-btn-submit u-button-style u-btn-2">Відправити
+                                                повідомлення</a>
                                             <input type="submit" value="submit" class="u-form-control-hidden">
                                         </div>
-                                        <div class="u-form-send-message u-form-send-success">Дякую! Ваше повідомлення відправлене.</div>
-                                        <div class="u-form-send-error u-form-send-message">Відправлення не вдалося. Будь-ласка, виправте помилки і спробуйте ще раз.</div>
+                                        <div class="u-form-send-message u-form-send-success">Дякуємо! Ваше повідомлення
+                                            відправлене.
+                                        </div>
+                                        <div class="u-form-send-error u-form-send-message">Відправлення не вдалося.
+                                            Будь-ласка, виправте помилки і спробуйте ще раз.
+                                        </div>
                                         <input type="hidden" value="" name="recaptchaResponse">
                                         <input type="hidden" name="formServices" value="">
                                     </form>
@@ -162,10 +214,13 @@
             </div>
         </div>
     </section>
-    <section class="u-clearfix u-section-5" id="carousel_ffc8">
+    <section class="u-clearfix u-section-11" id="carousel_ffc8">
         <div class="u-expanded u-grey-10 u-map">
             <div class="embed-responsive">
-                <iframe class="embed-responsive-item" src="//maps.google.com/maps?output=embed&amp;q=Manhattan&amp;t=m" data-map="JTdCJTIyYWRkcmVzcyUyMiUzQSUyMk1hbmhhdHRhbiUyMiUyQyUyMnpvb20lMjIlM0FudWxsJTJDJTIydHlwZUlkJTIyJTNBJTIycm9hZCUyMiUyQyUyMmxhbmclMjIlM0FudWxsJTJDJTIyYXBpS2V5JTIyJTNBbnVsbCUyQyUyMm1hcmtlcnMlMjIlM0ElNUIlNUQlN0Q="></iframe>
+                <iframe
+                        class="embed-responsive-item"
+                        src="https://maps.google.com/maps?q=49.32326416334298,28.09199529115664+(НазарійЛ)&z=15&output=embed">
+                </iframe>
             </div>
         </div>
     </section>

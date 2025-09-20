@@ -55,7 +55,7 @@ c0-7.4,3.4-18.8,18.8-18.8h13.8v15.4H75.5z"></path></svg></span>
                                         @if(isset($feedback_email) && $feedback_email)
                                             {{$feedback_email}}
                                         @else
-                                            hi@car.repair.com
+                                            nazaril1335@gmail.com
                                         @endif
 
                                     </a>
@@ -73,7 +73,7 @@ c0-7.4,3.4-18.8,18.8-18.8h13.8v15.4H75.5z"></path></svg></span>
                                         @if(isset($feedback_phone) && $feedback_phone)
                                             {{$feedback_phone}}
                                         @else
-                                            +1 (234) 567-8910
+                                            +380 96 552 4892,  +380 67 746 2089
                                         @endif
                                     </a>
                                 </div>
@@ -89,9 +89,7 @@ c0-7.4,3.4-18.8,18.8-18.8h13.8v15.4H75.5z"></path></svg></span>
                                         @if(isset($location) && $location)
                                             {{$location}}
                                         @else
-                                            456 Elm St,
-                                            Los
-                                            Angeles
+                                            Якова гальчевського 39, Літин, 22300
                                         @endif
                                     </p>
                                 </div>
@@ -108,7 +106,7 @@ c0-7.4,3.4-18.8,18.8-18.8h13.8v15.4H75.5z"></path></svg></span>
             <div class="u-clearfix u-sheet u-valign-middle u-sheet-2">
                 <a href="#" class="u-enable-responsive u-image u-logo u-image-1" data-image-width="413"
                    data-image-height="143">
-                    <img src="storage/images/car-repair-logo-blue2.png" class="u-logo-image u-logo-image-1">
+                    <img src="/images/logo.jpg" class="u-logo-image u-logo-image-1">
                 </a>
                 <nav class="u-dropdown-icon u-menu u-menu-mega u-offcanvas u-menu-1" data-responsive-from="MD">
                     <div class="menu-collapse" style="font-size: 1rem; letter-spacing: 0px; font-weight: 600;">
@@ -131,24 +129,21 @@ c0-7.4,3.4-18.8,18.8-18.8h13.8v15.4H75.5z"></path></svg></span>
                         <ul class="u-nav u-spacing-30 u-unstyled u-nav-1">
                             <li class="u-nav-item"><a
                                     class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-light-1 u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90"
-                                    href="/" style="padding: 6px 0px;">Home Page</a>
+                                    href="/" style="padding: 6px 0px;">Головна</a>
                             </li>
                             <li class="u-nav-item"><a
                                     class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-light-1 u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90"
-                                    href="/about-us" style="padding: 6px 0px;">About Us</a>
+                                    href="/about-us" style="padding: 6px 0px;">Про нас</a>
                             </li>
                             <li class="u-nav-item"><a
                                     class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-light-1 u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90"
-                                    href="/team" style="padding: 6px 0px;">Our team</a>
+                                    href="/team" style="padding: 6px 0px;">Наша команда</a>
                             </li>
                             <li class="u-nav-item"><a
                                     class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-light-1 u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90"
-                                    href="/pricing" style="padding: 6px 0px;">Pricing</a>
+                                    href="/pricing" style="padding: 6px 0px;">Ціни та послуги</a>
                             </li>
-                            <li class="u-nav-item"><a
-                                    class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-light-1 u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90"
-                                    href="/landing" style="padding: 6px 0px;">Landing</a>
-                            </li>
+
                         </ul>
                     </div>
                     <div class="u-custom-menu u-nav-container-collapse">
@@ -195,9 +190,9 @@ c0-7.4,3.4-18.8,18.8-18.8h13.8v15.4H75.5z"></path></svg></span>
                         <div class="u-black u-menu-overlay u-opacity u-opacity-70"></div>
                     </div>
                 </nav>
-                <a href="#"
+                <a href="#carousel_9629"
                    class="u-active-palette-5-dark-3 u-align-center u-border-none u-btn u-btn-round u-button-style u-enable-responsive u-hidden-xs u-hover-palette-5-dark-3 u-palette-1-base u-radius-2 u-text-active-white u-text-hover-white u-btn-3">
-                    Get a Quote</a>
+                    Задати питання</a>
             </div>
         </div>
     </div>

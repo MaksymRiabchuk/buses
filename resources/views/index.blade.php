@@ -30,16 +30,13 @@
                    data-animation-name="" data-animation-duration="0" data-animation-delay="0"
                    data-animation-direction="">
                     {{$mainPage['first_main_text']}}</p>
-                <a href="#"
-                   class="u-active-palette-5-dark-3 u-align-center-xs u-align-left-lg u-align-left-md u-align-left-sm u-align-left-xl u-border-none u-btn u-btn-round u-button-style u-hover-palette-5-dark-3 u-palette-1-base u-radius-2 u-text-active-white u-text-hover-white u-btn-1">
-                    {{$mainPage['first_main_btn_text']}}</a>
-            </div>
+                            </div>
         </div>
     </section>
     <section class="u-align-center u-clearfix u-container-align-center u-palette-1-light-3 u-section-2"
              id="carousel_535d">
         <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
-            <h2 class="u-align-center u-text u-text-default u-text-1"> Our services include</h2>
+            <h2 class="u-align-center u-text u-text-default u-text-1"> Наш сервіс включає</h2>
             <div class="u-expanded-width u-layout-horizontal u-list u-list-1">
                 <div class="u-repeater u-repeater-1">
                     @foreach($mainPage['sliders'] as $slider)
@@ -93,11 +90,12 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
                             src="" data-animation-name="customAnimationIn" data-animation-duration="1500"
                             data-animation-delay="500">
                             <div class="u-container-layout u-valign-middle u-container-layout-1" src="">
-                                <h3 class="u-align-left u-text u-text-1">About Us</h3>
+                                <h3 class="u-align-left u-text u-text-1">Про нас</h3>
                                 <p class="u-align-left u-large-text u-text u-text-default u-text-variant u-text-2">{{$mainPage['about_us_text']}}</p>
-                                <a href="#"
-                                   class="u-active-palette-5-dark-3 u-align-left u-border-none u-btn u-btn-round u-button-style u-hover-palette-5-dark-3 u-palette-1-base u-radius-2 u-text-active-white u-text-hover-white u-btn-1">Learn
-                                    more </a>
+                                <a href="/about-us"
+                                   class="u-active-palette-5-dark-3 u-align-left u-border-none u-btn u-btn-round u-button-style u-hover-palette-5-dark-3 u-palette-1-base u-radius-2 u-text-active-white u-text-hover-white u-btn-1">
+                                    Більше
+                                </a>
                             </div>
                         </div>
                         <div
@@ -154,11 +152,8 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
              id="carousel_4254">
         <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
             <h2 class="u-align-center u-text u-text-default u-text-1" data-animation-name="flipIn"
-                data-animation-duration="1500" data-animation-delay="500" data-animation-direction="X"> Our Areas Of
-                Expertise</h2>
-            <p class="u-align-center u-text u-text-2" data-animation-name="customAnimationIn"
-               data-animation-duration="1500"
-               data-animation-delay="250"> {{$mainPage['gallery_text']}}</p>
+                data-animation-duration="1500" data-animation-delay="500" data-animation-direction="X"> Галерея</h2>
+
             <div class="u-expanded-width u-list u-list-1">
                 <div class="u-repeater u-repeater-1">
                     @foreach($mainPage['gallery'] as $gallery)
@@ -252,9 +247,7 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
                                   d="M72.326,147.33c4.284-26.928,37.944-55.692,64.26-56.304c1.836,0,3.672-0.612,4.896-1.836   c1.224-0.612,2.448-1.224,3.06-3.06c9.18-17.136,4.284-30.6-11.016-41.616c-17.748-12.852-45.9,0-59.976,11.628   C38.054,85.518,1.946,136.313,3.782,184.662c-6.12,32.437-4.896,67.32,4.284,96.084c6.12,18.36,23.868,27.54,42.228,28.764   c18.36,1.225,56.304,6.732,72.828-4.283c16.524-11.017,17.748-32.437,19.584-50.796c1.836-20.196,7.344-58.141-9.792-74.053   C115.778,165.078,66.818,181.602,72.326,147.33z"></path><path
                                   d="M274.286,147.33c4.284-26.928,37.943-55.692,64.26-56.304c1.836,0,3.672-0.612,4.896-1.836   c1.225-0.612,2.448-1.224,3.061-3.06c9.18-17.136,4.284-30.6-11.016-41.616c-17.748-12.852-45.9,0-59.977,11.628   c-35.496,29.376-71.604,80.172-69.768,128.52c-6.12,32.437-4.896,67.32,4.283,96.084c6.12,18.36,23.868,27.54,42.229,28.764   c18.36,1.225,56.304,6.732,72.828-4.283c16.523-11.017,17.748-32.437,19.584-50.796c1.836-20.196,7.344-58.141-9.792-74.053   C317.738,165.078,268.166,181.602,274.286,147.33z"></path>
     </g></svg></span>
-                        <p class="u-text u-text-2">Proin sed libero enim sed faucibus turpis. At imperdiet dui accumsan
-                            sit
-                            amet nulla facilisi morbi tempus. Ut sem nulla pharetra diam sit amet nisl.&nbsp;</p>
+                        <p class="u-text u-text-2">Дуже задоволені обслуговуванням! Автобуси комфортні, чисті, завжди вчасно прибувають. Водії привітні та уважні до пасажирів. Подорож пройшла спокійно та приємно. Рекомендуємо!&nbsp;</p>
                         <h5 class="u-text u-text-3">Celia Almeda</h5>
                     </div>
                 </div>
@@ -271,9 +264,7 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
                                   d="M72.326,147.33c4.284-26.928,37.944-55.692,64.26-56.304c1.836,0,3.672-0.612,4.896-1.836   c1.224-0.612,2.448-1.224,3.06-3.06c9.18-17.136,4.284-30.6-11.016-41.616c-17.748-12.852-45.9,0-59.976,11.628   C38.054,85.518,1.946,136.313,3.782,184.662c-6.12,32.437-4.896,67.32,4.284,96.084c6.12,18.36,23.868,27.54,42.228,28.764   c18.36,1.225,56.304,6.732,72.828-4.283c16.524-11.017,17.748-32.437,19.584-50.796c1.836-20.196,7.344-58.141-9.792-74.053   C115.778,165.078,66.818,181.602,72.326,147.33z"></path><path
                                   d="M274.286,147.33c4.284-26.928,37.943-55.692,64.26-56.304c1.836,0,3.672-0.612,4.896-1.836   c1.225-0.612,2.448-1.224,3.061-3.06c9.18-17.136,4.284-30.6-11.016-41.616c-17.748-12.852-45.9,0-59.977,11.628   c-35.496,29.376-71.604,80.172-69.768,128.52c-6.12,32.437-4.896,67.32,4.283,96.084c6.12,18.36,23.868,27.54,42.229,28.764   c18.36,1.225,56.304,6.732,72.828-4.283c16.523-11.017,17.748-32.437,19.584-50.796c1.836-20.196,7.344-58.141-9.792-74.053   C317.738,165.078,268.166,181.602,274.286,147.33z"></path>
     </g></svg></span>
-                        <p class="u-text u-text-4">Proin sed libero enim sed faucibus turpis. At imperdiet dui accumsan
-                            sit
-                            amet nulla facilisi morbi tempus. Ut sem nulla pharetra diam sit amet nisl.&nbsp;</p>
+                        <p class="u-text u-text-4">Користуюсь послугами компанії вже кілька разів і завжди залишаюсь задоволеним. Зручний графік, квитки можна забронювати онлайн, а ціни цілком доступні. Почуваєшся в дорозі безпечно.&nbsp;</p>
                         <h5 class="u-text u-text-5">Frank Kinney</h5>
                     </div>
                 </div>
@@ -290,9 +281,7 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
                                   d="M72.326,147.33c4.284-26.928,37.944-55.692,64.26-56.304c1.836,0,3.672-0.612,4.896-1.836   c1.224-0.612,2.448-1.224,3.06-3.06c9.18-17.136,4.284-30.6-11.016-41.616c-17.748-12.852-45.9,0-59.976,11.628   C38.054,85.518,1.946,136.313,3.782,184.662c-6.12,32.437-4.896,67.32,4.284,96.084c6.12,18.36,23.868,27.54,42.228,28.764   c18.36,1.225,56.304,6.732,72.828-4.283c16.524-11.017,17.748-32.437,19.584-50.796c1.836-20.196,7.344-58.141-9.792-74.053   C115.778,165.078,66.818,181.602,72.326,147.33z"></path><path
                                   d="M274.286,147.33c4.284-26.928,37.943-55.692,64.26-56.304c1.836,0,3.672-0.612,4.896-1.836   c1.225-0.612,2.448-1.224,3.061-3.06c9.18-17.136,4.284-30.6-11.016-41.616c-17.748-12.852-45.9,0-59.977,11.628   c-35.496,29.376-71.604,80.172-69.768,128.52c-6.12,32.437-4.896,67.32,4.283,96.084c6.12,18.36,23.868,27.54,42.229,28.764   c18.36,1.225,56.304,6.732,72.828-4.283c16.523-11.017,17.748-32.437,19.584-50.796c1.836-20.196,7.344-58.141-9.792-74.053   C317.738,165.078,268.166,181.602,274.286,147.33z"></path>
     </g></svg></span>
-                        <p class="u-text u-text-6">Proin sed libero enim sed faucibus turpis. At imperdiet dui accumsan
-                            sit
-                            amet nulla facilisi morbi tempus. Ut sem nulla pharetra diam sit amet nisl.&nbsp;</p>
+                        <p class="u-text u-text-6">Чудовий сервіс! Дуже сподобалося, що в салоні працює кондиціонер, зручні сидіння та є можливість зарядити телефон. Поїздка була комфортною, а час пролетів непомітно.&nbsp;</p>
                         <h5 class="u-text u-text-7"> Sam Perry</h5>
                     </div>
                 </div>
@@ -309,9 +298,7 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
                                   d="M72.326,147.33c4.284-26.928,37.944-55.692,64.26-56.304c1.836,0,3.672-0.612,4.896-1.836   c1.224-0.612,2.448-1.224,3.06-3.06c9.18-17.136,4.284-30.6-11.016-41.616c-17.748-12.852-45.9,0-59.976,11.628   C38.054,85.518,1.946,136.313,3.782,184.662c-6.12,32.437-4.896,67.32,4.284,96.084c6.12,18.36,23.868,27.54,42.228,28.764   c18.36,1.225,56.304,6.732,72.828-4.283c16.524-11.017,17.748-32.437,19.584-50.796c1.836-20.196,7.344-58.141-9.792-74.053   C115.778,165.078,66.818,181.602,72.326,147.33z"></path><path
                                   d="M274.286,147.33c4.284-26.928,37.943-55.692,64.26-56.304c1.836,0,3.672-0.612,4.896-1.836   c1.225-0.612,2.448-1.224,3.061-3.06c9.18-17.136,4.284-30.6-11.016-41.616c-17.748-12.852-45.9,0-59.977,11.628   c-35.496,29.376-71.604,80.172-69.768,128.52c-6.12,32.437-4.896,67.32,4.283,96.084c6.12,18.36,23.868,27.54,42.229,28.764   c18.36,1.225,56.304,6.732,72.828-4.283c16.523-11.017,17.748-32.437,19.584-50.796c1.836-20.196,7.344-58.141-9.792-74.053   C317.738,165.078,268.166,181.602,274.286,147.33z"></path>
     </g></svg></span>
-                        <p class="u-text u-text-8">Proin sed libero enim sed faucibus turpis. At imperdiet dui accumsan
-                            sit
-                            amet nulla facilisi morbi tempus. Ut sem nulla pharetra diam sit amet nisl.&nbsp;</p>
+                        <p class="u-text u-text-8">&nbsp;Приємно здивувала пунктуальність та організованість. Водії професіонали, їдуть спокійно та впевнено. Подорожувати з цією компанією – одне задоволення!</p>
                         <h5 class="u-text u-text-9"> Marry Hudson</h5>
                     </div>
                 </div>
@@ -321,7 +308,7 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
     <section class="u-align-center u-clearfix u-container-align-center u-section-7" id="carousel_3f98">
         <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
             <h2 class="u-align-center u-text u-text-default u-text-1" data-animation-name="customAnimationIn"
-                data-animation-duration="1500" data-animation-delay="0"> Team members</h2>
+                data-animation-duration="1500" data-animation-delay="0"> Члени команди</h2>
             <div class="u-expanded-width u-layout-horizontal u-list u-list-1">
                 <div class="u-repeater u-repeater-1">
                     @foreach($mainPage['employees'] as $employee)
@@ -374,143 +361,6 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
             </div>
         </div>
     </section>
-    <section class="u-clearfix u-container-align-center u-palette-1-light-3 u-section-8" id="sec-5d62">
-        <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
-            <h2 class="u-align-center u-text u-text-default u-text-1" data-animation-name="customAnimationIn"
-                data-animation-duration="1500" data-animation-delay="500"> What Makes Us Special</h2>
-            <p class="u-align-center u-text u-text-2" data-animation-name="customAnimationIn"
-               data-animation-duration="1500"
-               data-animation-delay="500"> Sample text. Click to select the Text Element.&nbsp;​Duis aute irure dolor in
-                reprehenderit.</p>
-            <div class="u-expanded-width u-list u-list-1">
-                <div class="u-repeater u-repeater-1">
-                    <div
-                        class="u-container-align-center u-container-style u-list-item u-repeater-item u-white u-list-item-1"
-                        data-animation-name="flipIn" data-animation-duration="1500" data-animation-delay="500"
-                        data-animation-direction="X">
-                        <div class="u-container-layout u-similar-container u-valign-top u-container-layout-1">
-                            <h5 class="u-align-center u-text u-text-3" data-animation-name="counter"
-                                data-animation-event="scroll" data-animation-duration="3000">25</h5>
-                            <p class="u-align-center u-text u-text-4"> Years of experience</p>
-                        </div>
-                    </div>
-                    <div
-                        class="u-container-align-center u-container-style u-list-item u-repeater-item u-white u-list-item-2"
-                        data-animation-name="flipIn" data-animation-duration="1500" data-animation-direction="X"
-                        data-animation-delay="500">
-                        <div class="u-container-layout u-similar-container u-valign-top u-container-layout-2">
-                            <h5 class="u-align-center u-text u-text-5" data-animation-name="counter"
-                                data-animation-event="scroll" data-animation-duration="3000">18</h5>
-                            <p class="u-align-center u-text u-text-6"> Amazing employees</p>
-                        </div>
-                    </div>
-                    <div
-                        class="u-container-align-center u-container-style u-list-item u-repeater-item u-white u-list-item-3"
-                        data-animation-name="flipIn" data-animation-duration="1500" data-animation-direction="X"
-                        data-animation-delay="500">
-                        <div class="u-container-layout u-similar-container u-valign-top u-container-layout-3">
-                            <h5 class="u-align-center u-text u-text-7" data-animation-name="counter"
-                                data-animation-event="scroll" data-animation-duration="3000">10k</h5>
-                            <p class="u-align-center u-text u-text-8"> Hours of maintenance</p>
-                        </div>
-                    </div>
-                    <div
-                        class="u-container-align-center u-container-style u-list-item u-repeater-item u-white u-list-item-4"
-                        data-animation-name="flipIn" data-animation-duration="1500" data-animation-direction="X"
-                        data-animation-delay="500">
-                        <div class="u-container-layout u-similar-container u-valign-top u-container-layout-4">
-                            <h5 class="u-align-center u-text u-text-9" data-animation-name="counter"
-                                data-animation-event="scroll" data-animation-duration="3000">2k</h5>
-                            <p class="u-align-center u-text u-text-10"> Projects done</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="u-align-center u-clearfix u-container-align-center u-palette-1-light-3 u-section-9"
-             id="carousel_831b">
-        <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
-            <h2 class="u-align-center u-text u-text-default u-text-1">Car Tips</h2><!--blog--><!--blog_options_json-->
-            <!--{"type":"Recent","source":"","tags":"","count":""}--><!--/blog_options_json-->
-            <div class="u-blog u-expanded-width u-blog-1" data-site-sorting-prop="created"
-                 data-site-sorting-order="desc"
-                 data-blog-id="blog-1">
-                <div class="u-list-control"></div>
-                <div class="u-repeater u-repeater-1"><!--blog_post-->
-                    <div
-                        class="u-align-center u-blog-post u-container-align-center u-container-style u-repeater-item u-video-cover u-white u-repeater-item-1">
-                        <div class="u-container-layout u-similar-container u-valign-top u-container-layout-1">
-                            <a class="u-post-header-link" href="blog/post-5.html"><!--blog_post_image-->
-                                <img alt="" class="u-blog-control u-expanded-width u-image u-image-default u-image-1"
-                                     src="storage/images/mechanical-woman-holding-wrench.jpg" data-image-width="1380"
-                                     data-image-height="920"><!--/blog_post_image-->
-                            </a><!--blog_post_header-->
-                            <h4 class="u-blog-control u-text u-text-2">
-                                <a class="u-post-header-link" href="blog/post-5.html">Post 6 Headline</a>
-                            </h4><!--/blog_post_header--><!--blog_post_content-->
-                            <div class="u-blog-control u-post-content u-text u-text-3 fr-view">Sample small text. Lorem
-                                ipsum dolor sit amet.
-                            </div><!--/blog_post_content--><!--blog_post_readmore-->
-                            <a href="blog/post-5.html"
-                               class="u-blog-control u-border-active-none u-border-hover-none u-btn u-btn-rectangle u-button-style u-none u-text-body-color u-btn-1">
-                                <!--blog_post_readmore_content--><!--options_json-->
-                                <!--{"content":"Read More","defaultValue":"Читати далі"}--><!--/options_json-->Read More
-                                <!--/blog_post_readmore_content--></a><!--/blog_post_readmore-->
-                        </div>
-                    </div>
-                    <div
-                        class="u-align-center u-blog-post u-container-align-center u-container-style u-repeater-item u-video-cover u-white u-repeater-item-2">
-                        <div class="u-container-layout u-similar-container u-valign-top u-container-layout-2">
-                            <a class="u-post-header-link" href="blog/post-4.html"><!--blog_post_image-->
-                                <img alt="" class="u-blog-control u-expanded-width u-image u-image-default u-image-2"
-                                     src="storage/images/low-angle-woman-replacing-car-wh.jpg" data-image-width="626"
-                                     data-image-height="417"><!--/blog_post_image-->
-                            </a><!--blog_post_header-->
-                            <h4 class="u-blog-control u-text u-text-4">
-                                <a class="u-post-header-link" href="blog/post-4.html">Post 5 Headline</a>
-                            </h4><!--/blog_post_header--><!--blog_post_content-->
-                            <div class="u-blog-control u-post-content u-text u-text-5 fr-view">Sample small text. Lorem
-                                ipsum dolor sit amet.
-                            </div><!--/blog_post_content--><!--blog_post_readmore-->
-                            <a href="blog/post-4.html"
-                               class="u-blog-control u-border-active-none u-border-hover-none u-btn u-btn-rectangle u-button-style u-none u-text-body-color u-btn-2">
-                                <!--blog_post_readmore_content--><!--options_json-->
-                                <!--{"content":"Read More","defaultValue":"Читати далі"}--><!--/options_json-->Read More
-                                <!--/blog_post_readmore_content--></a><!--/blog_post_readmore-->
-                        </div>
-                    </div>
-                    <div
-                        class="u-align-center u-blog-post u-container-align-center u-container-style u-repeater-item u-video-cover u-white u-repeater-item-3">
-                        <div class="u-container-layout u-similar-container u-valign-top u-container-layout-3">
-                            <a class="u-post-header-link" href="blog/post-3.html"><!--blog_post_image-->
-                                <img alt="" class="u-blog-control u-expanded-width u-image u-image-default u-image-3"
-                                     src="storage/images/auto-service-with-beautiful-woma.jpg" data-image-width="1600"
-                                     data-image-height="1067"><!--/blog_post_image-->
-                            </a><!--blog_post_header-->
-                            <h4 class="u-blog-control u-text u-text-6">
-                                <a class="u-post-header-link" href="blog/post-3.html">Post 4 Headline</a>
-                            </h4><!--/blog_post_header--><!--blog_post_content-->
-                            <div class="u-blog-control u-post-content u-text u-text-7 fr-view">Sample small text. Lorem
-                                ipsum dolor sit amet.
-                            </div><!--/blog_post_content--><!--blog_post_readmore-->
-                            <a href="blog/post-3.html"
-                               class="u-blog-control u-border-active-none u-border-hover-none u-btn u-btn-rectangle u-button-style u-none u-text-body-color u-btn-3">
-                                <!--blog_post_readmore_content--><!--options_json-->
-                                <!--{"content":"Read More","defaultValue":"Читати далі"}--><!--/options_json-->Read More
-                                <!--/blog_post_readmore_content--></a><!--/blog_post_readmore-->
-                        </div>
-                    </div><!--/blog_post--><!--blog_post-->
-                    <!--/blog_post--><!--blog_post-->
-                    <!--/blog_post-->
-                </div>
-                <div class="u-list-control"></div>
-            </div><!--/blog-->
-            <a href="#"
-               class="u-active-palette-5-dark-3 u-align-center u-border-none u-btn u-btn-round u-button-style u-hover-palette-5-dark-3 u-palette-1-base u-radius-2 u-text-active-white u-text-hover-white u-btn-4">Learn
-                more </a>
-        </div>
-    </section>
     <section class="u-clearfix u-section-10" id="carousel_9629">
         <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
             <div class="data-layout-selected u-clearfix u-expanded-width u-layout-wrap u-layout-wrap-1">
@@ -518,11 +368,8 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
                     <div class="u-layout-row">
                         <div class="u-container-style u-layout-cell u-size-20 u-layout-cell-1">
                             <div class="u-container-layout u-container-layout-1">
-                                <h2 class="u-text u-text-default u-text-1">Write Us</h2>
-                                <p class="u-align-left u-text u-text-2">Images from <a href="https://www.freepik.com"
-                                                                                       class="u-active-none u-border-1 u-border-active-palette-1-base u-border-black u-border-hover-palette-1-base u-border-no-left u-border-no-right u-border-no-top u-bottom-left-radius-0 u-bottom-right-radius-0 u-btn u-button-link u-button-style u-hover-none u-none u-radius-0 u-text-body-color u-top-left-radius-0 u-top-right-radius-0 u-btn-1"
-                                                                                       target="_blank">Freepik</a>
-                                </p>
+                                <h2 class="u-text u-text-default u-text-1">Напишіть нам</h2>
+
                             </div>
                         </div>
                         <div class="u-container-style u-layout-cell u-size-40 u-layout-cell-2">
@@ -555,7 +402,7 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
                                                    required="">
                                         </div>
                                         <div class="u-form-group u-form-message">
-                                            <label for="message-175e" class="u-label">Message</label>
+                                            <label for="message-175e" class="u-label">Повідомлення</label>
                                             <textarea placeholder="Введіть своє повідомлення" rows="4" cols="50"
                                                       id="message-175e" name="message"
                                                       class="u-border-no-left u-border-no-right u-border-no-top u-input u-input-rectangle"
@@ -586,8 +433,10 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
     <section class="u-clearfix u-section-11" id="carousel_ffc8">
         <div class="u-expanded u-grey-10 u-map">
             <div class="embed-responsive">
-                <iframe class="embed-responsive-item" src="//maps.google.com/maps?output=embed&amp;q=Manhattan&amp;t=m"
-                        data-map="JTdCJTIyYWRkcmVzcyUyMiUzQSUyMk1hbmhhdHRhbiUyMiUyQyUyMnpvb20lMjIlM0FudWxsJTJDJTIydHlwZUlkJTIyJTNBJTIycm9hZCUyMiUyQyUyMmxhbmclMjIlM0FudWxsJTJDJTIyYXBpS2V5JTIyJTNBbnVsbCUyQyUyMm1hcmtlcnMlMjIlM0ElNUIlNUQlN0Q="></iframe>
+                <iframe
+                        class="embed-responsive-item"
+                        src="https://maps.google.com/maps?q=49.32326416334298,28.09199529115664+(НазарійЛ)&z=15&output=embed">
+                </iframe>
             </div>
         </div>
     </section>

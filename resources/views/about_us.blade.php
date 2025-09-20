@@ -25,13 +25,10 @@
                  data-animation-name="flipIn" data-animation-duration="1500" data-animation-delay="800"
                  data-animation-direction="X">
                 <div class="u-container-layout u-valign-middle u-container-layout-1">
-                    <h2 class="u-align-left u-text u-text-1">About Us<br>
+                    <h2 class="u-align-left u-text u-text-1">Про нас<br>
                     </h2>
                     <p class="u-align-left u-text u-text-2" data-animation-name="" data-animation-duration="0"
                        data-animation-delay="0" data-animation-direction=""> {{$aboutUs['first_main_text']}}</p>
-                    <a href="#"
-                       class="u-active-palette-5-dark-3 u-align-left u-border-none u-btn u-btn-round u-button-style u-hover-palette-5-dark-3 u-palette-1-base u-radius-2 u-text-active-white u-text-hover-white u-btn-2">Learn
-                        more </a>
                 </div>
             </div>
         </div>
@@ -43,11 +40,8 @@
                 class="u-container-align-left u-container-style u-expanded-width-md u-expanded-width-sm u-expanded-width-xs u-group u-shape-rectangle u-group-1"
                 data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="0">
                 <div class="u-container-layout u-valign-middle u-container-layout-1">
-                    <h2 class="u-align-left u-text u-text-1"> Why Choose us?</h2>
+                    <h2 class="u-align-left u-text u-text-1"> Чому вибирають нас?</h2>
                     <p class="u-align-left u-text u-text-default u-text-2"> {{$aboutUs['reasons_main_text']}}</p>
-                    <a href="#"
-                       class="u-active-palette-5-dark-3 u-align-left u-border-none u-btn u-btn-round u-button-style u-hover-palette-5-dark-3 u-palette-1-base u-radius-2 u-text-active-white u-text-hover-white u-btn-1">Learn
-                        more </a>
                 </div>
             </div>
             <div class="u-expanded-width-md u-expanded-width-sm u-expanded-width-xs u-list u-list-1">
@@ -93,7 +87,7 @@
                             src="" data-animation-name="customAnimationIn" data-animation-duration="1500"
                             data-animation-delay="500">
                             <div class="u-container-layout u-valign-middle u-container-layout-1">
-                                <h3 class="u-align-center u-text u-text-default u-text-1">Our Clients Say</h3>
+                                <h3 class="u-align-center u-text u-text-default u-text-1">Що кажуть наші клієнти про нас</h3>
                                 <div id="carousel-4870" data-interval="5000" data-u-ride="carousel"
                                      class="u-carousel u-expanded-width u-slider u-slider-1">
                                     <ol class="u-absolute-hcenter u-carousel-indicators u-carousel-indicators-1">
@@ -193,11 +187,8 @@
                             data-animation-name="customAnimationIn" data-animation-duration="1500"
                             data-animation-delay="700">
                             <div class="u-container-layout u-valign-middle u-container-layout-1">
-                                <h2 class="u-align-left u-text u-text-1">Our History</h2>
+                                <h2 class="u-align-left u-text u-text-1">Наша історія</h2>
                                 <p class="u-align-left u-text u-text-default u-text-2"> {{$aboutUs['our_history_text']}}</p>
-                                <a href="#"
-                                   class="u-active-palette-5-dark-3 u-align-left u-border-none u-btn u-btn-round u-button-style u-hover-palette-5-dark-3 u-palette-1-base u-radius-2 u-text-active-white u-text-hover-white u-btn-1">Learn
-                                    more </a>
                             </div>
                         </div>
                         <div
@@ -264,39 +255,9 @@
             </div>
         </div>
     </section>
-    <section class="u-clearfix u-container-align-center u-palette-1-light-3 u-section-5" id="carousel_97fb">
-        <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
-            <div class="data-layout-selected u-clearfix u-expanded-width u-gutter-0 u-layout-wrap u-layout-wrap-1">
-                <div class="u-layout">
-                    <div class="u-layout-row">
-                        <div
-                            class="u-container-align-center-md u-container-align-center-sm u-container-align-center-xs u-container-align-left-lg u-container-align-left-xl u-container-style u-layout-cell u-size-40-lg u-size-40-xl u-size-60-md u-size-60-sm u-size-60-xs u-white u-layout-cell-1"
-                            data-animation-name="customAnimationIn" data-animation-duration="1500"
-                            data-animation-delay="500">
-                            <div class="u-container-layout u-valign-middle u-container-layout-1">
-                                <h3 class="u-align-center-md u-align-center-sm u-align-center-xs u-align-left-lg u-align-left-xl u-text u-text-default u-text-1">
-                                    Certified Repair Shop</h3>
-                                <p class="u-align-center-md u-align-center-sm u-align-center-xs u-align-left-lg u-align-left-xl u-text u-text-default u-text-2">
-                                    We are certified to make your vehicle periodic inspection</p>
-                            </div>
-                        </div>
-                        <div
-                            class="u-container-align-center u-container-style u-layout-cell u-size-20-lg u-size-20-xl u-size-60-md u-size-60-sm u-size-60-xs u-white u-layout-cell-2"
-                            data-animation-name="customAnimationIn" data-animation-duration="1500"
-                            data-animation-delay="500">
-                            <div class="u-container-layout u-valign-middle u-container-layout-2">
-                                <a href="#"
-                                   class="u-active-palette-5-dark-3 u-align-center u-border-none u-btn u-btn-round u-button-style u-hover-palette-5-dark-3 u-palette-1-base u-radius-2 u-text-active-white u-text-hover-white u-btn-1">appointment </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
     <section class="u-align-center u-clearfix u-container-align-center u-section-6" id="carousel_3f98">
         <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
-            <h2 class="u-align-center u-text u-text-default u-text-1"> Team members</h2>
+            <h2 class="u-align-center u-text u-text-default u-text-1"> Члени команди</h2>
             <div class="u-expanded-width u-layout-horizontal u-list u-list-1">
                 <div class="u-repeater u-repeater-1">
                     @foreach($aboutUs['employees'] as $employee)
@@ -352,10 +313,9 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
     <section class="u-clearfix u-container-align-center u-palette-1-light-3 u-section-7" id="carousel_156e">
         <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
             <h2 class="u-align-center u-text u-text-default u-text-1" data-animation-name="customAnimationIn"
-                data-animation-duration="1500" data-animation-delay="0"> What Makes Us Special</h2>
+                data-animation-duration="1500" data-animation-delay="0"> Ми в цифрах</h2>
             <p class="u-align-center u-text u-text-2" data-animation-name="customAnimationIn"
-               data-animation-duration="1500" data-animation-delay="0"> Sample text. Click to select the Text Element.&nbsp;​Duis
-                aute irure dolor in reprehenderit.</p>
+               data-animation-duration="1500" data-animation-delay="0"> Наші досягнення, якими ми пишаємось</p>
             <div class="u-expanded-width u-list u-list-1">
                 <div class="u-repeater u-repeater-1">
                     <div
@@ -366,7 +326,7 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
                             <h5 class="u-align-center u-text u-text-palette-1-base u-text-3"
                                 data-animation-name="counter" data-animation-event="scroll"
                                 data-animation-duration="3000">25</h5>
-                            <p class="u-align-center u-text u-text-4"> Years of experience</p>
+                            <p class="u-align-center u-text u-text-4"> Років досвіду</p>
                         </div>
                     </div>
                     <div
@@ -377,7 +337,7 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
                             <h5 class="u-align-center u-text u-text-palette-1-base u-text-5"
                                 data-animation-name="counter" data-animation-event="scroll"
                                 data-animation-duration="3000">18</h5>
-                            <p class="u-align-center u-text u-text-6"> Amazing employees</p>
+                            <p class="u-align-center u-text u-text-6"> Кваліфікованих працівників</p>
                         </div>
                     </div>
                     <div
@@ -388,7 +348,7 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
                             <h5 class="u-align-center u-text u-text-palette-1-base u-text-7"
                                 data-animation-name="counter" data-animation-event="scroll"
                                 data-animation-duration="3000">10k</h5>
-                            <p class="u-align-center u-text u-text-8"> Hours of maintenance</p>
+                            <p class="u-align-center u-text u-text-8"> Часів в дорозі</p>
                         </div>
                     </div>
                     <div
@@ -399,21 +359,22 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
                             <h5 class="u-align-center u-text u-text-palette-1-base u-text-9"
                                 data-animation-name="counter" data-animation-event="scroll"
                                 data-animation-duration="3000">2k</h5>
-                            <p class="u-align-center u-text u-text-10"> Projects done</p>
+                            <p class="u-align-center u-text u-text-10"> Поїздок</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <section class="u-clearfix u-section-8" id="carousel_9629">
+    <section class="u-clearfix u-section-10" id="carousel_9629">
         <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
             <div class="data-layout-selected u-clearfix u-expanded-width u-layout-wrap u-layout-wrap-1">
                 <div class="u-layout">
                     <div class="u-layout-row">
                         <div class="u-container-style u-layout-cell u-size-20 u-layout-cell-1">
                             <div class="u-container-layout u-container-layout-1">
-                                <h2 class="u-text u-text-default u-text-1">Write Us</h2>
+                                <h2 class="u-text u-text-default u-text-1">Напишіть нам</h2>
+
                             </div>
                         </div>
                         <div class="u-container-style u-layout-cell u-size-40 u-layout-cell-2">
@@ -446,7 +407,7 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
                                                    required="">
                                         </div>
                                         <div class="u-form-group u-form-message">
-                                            <label for="message-175e" class="u-label">Message</label>
+                                            <label for="message-175e" class="u-label">Повідомлення</label>
                                             <textarea placeholder="Введіть своє повідомлення" rows="4" cols="50"
                                                       id="message-175e" name="message"
                                                       class="u-border-no-left u-border-no-right u-border-no-top u-input u-input-rectangle"
@@ -474,11 +435,13 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
             </div>
         </div>
     </section>
-    <section class="u-clearfix u-section-9" id="carousel_ffc8">
+    <section class="u-clearfix u-section-11" id="carousel_ffc8">
         <div class="u-expanded u-grey-10 u-map">
             <div class="embed-responsive">
-                <iframe class="embed-responsive-item" src="//maps.google.com/maps?output=embed&amp;q=Manhattan&amp;t=m"
-                        data-map="JTdCJTIyYWRkcmVzcyUyMiUzQSUyMk1hbmhhdHRhbiUyMiUyQyUyMnpvb20lMjIlM0FudWxsJTJDJTIydHlwZUlkJTIyJTNBJTIycm9hZCUyMiUyQyUyMmxhbmclMjIlM0FudWxsJTJDJTIyYXBpS2V5JTIyJTNBbnVsbCUyQyUyMm1hcmtlcnMlMjIlM0ElNUIlNUQlN0Q="></iframe>
+                <iframe
+                        class="embed-responsive-item"
+                        src="https://maps.google.com/maps?q=49.32326416334298,28.09199529115664+(НазарійЛ)&z=15&output=embed">
+                </iframe>
             </div>
         </div>
     </section>
