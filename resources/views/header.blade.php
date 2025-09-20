@@ -152,38 +152,11 @@ c0-7.4,3.4-18.8,18.8-18.8h13.8v15.4H75.5z"></path></svg></span>
                             <div class="u-inner-container-layout u-sidenav-overflow">
                                 <div class="u-menu-close"></div>
                                 <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-3">
-                                    <li class="u-nav-item"><a class="u-button-style u-nav-link" href="./">Home Page</a>
-                                    </li>
-                                    <li class="u-nav-item"><a class="u-button-style u-nav-link" href="Про-нас.html">About
-                                            Us</a>
-                                    </li>
-                                    <li class="u-nav-item"><a class="u-button-style u-nav-link">Pages</a>
-                                        <div class="u-nav-popup">
-                                            <ul class="u-h-spacing-22 u-nav u-unstyled u-v-spacing-12 u-nav-4">
-                                                <li class="u-nav-item"><a
-                                                        class="u-active-palette-1-light-3 u-button-style u-hover-palette-1-light-3 u-nav-link u-text-active-palette-1-base u-text-black u-text-hover-palette-1-base u-white"
-                                                        href="Команда.html">Our Team</a>
-                                                </li>
-                                                <li class="u-nav-item"><a
-                                                        class="u-active-palette-1-light-3 u-button-style u-hover-palette-1-light-3 u-nav-link u-text-active-palette-1-base u-text-black u-text-hover-palette-1-base u-white"
-                                                        href="Pricing-Page.html">Pricing</a>
-                                                </li>
-                                                <li class="u-nav-item"><a
-                                                        class="u-active-palette-1-light-3 u-button-style u-hover-palette-1-light-3 u-nav-link u-text-active-palette-1-base u-text-black u-text-hover-palette-1-base u-white"
-                                                        href="Лендінг.html">Landing</a>
-                                                </li>
-                                                <li class="u-nav-item"><a
-                                                        class="u-active-palette-1-light-3 u-button-style u-hover-palette-1-light-3 u-nav-link u-text-active-palette-1-base u-text-black u-text-hover-palette-1-base u-white"
-                                                        href="blog/blog.html">Блог</a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </li>
-                                    <li class="u-nav-item"><a class="u-button-style u-nav-link"
-                                                              href="Pricing-Page.html">Pricing</a>
-                                    </li>
-                                    <li class="u-nav-item"><a class="u-button-style u-nav-link" href="blog/blog.html">Блог</a>
-                                    </li>
+                                    <li class="u-nav-item"><a class="u-button-style u-nav-link" href="/">Головна</a> </li>
+                                    <li class="u-nav-item"><a class="u-button-style u-nav-link" href="/about-us">Про нас</a> </li>
+                                    <li class="u-nav-item"><a class="u-button-style u-nav-link" href="/team">Наша команда</a> </li>
+                                    <li class="u-nav-item"><a class="u-button-style u-nav-link" href="pricing">Ціни та послуги</a> </li>
+
                                 </ul>
                             </div>
                         </div>
