@@ -6,7 +6,7 @@
             <div class="u-clearfix u-sheet u-valign-middle-lg u-valign-middle-xl u-valign-middle-xs u-sheet-1">
                 <div class="u-hidden-md u-hidden-sm u-hidden-xs u-social-icons u-spacing-10 u-social-icons-1">
                     <a class="u-social-url" title="facebook" target="_blank" href="https://m.me/perevezenia.pasaziriv?hash=AbZ3lyPdzQi3NEqT&source=qr_link_share">
-                <span class="u-icon u-social-facebook u-social-icon u-text-white u-icon-1"><svg class="u-svg-link"
+                <span class="u-icon u-social-facebook u-social-icon u-text-white u-icon-1" style="height: 45px !important;"><svg class="u-svg-link"
                                                                                                 preserveAspectRatio="xMidYMin slice"
                                                                                                 viewBox="0 0 112 112"
                                                                                                 style=""><use
@@ -16,7 +16,7 @@
 c0-7.4,3.4-18.8,18.8-18.8h13.8v15.4H75.5z"></path></svg></span>
                     </a>
                     <a class="u-social-url" title="instagram" target="_blank" href="https://www.instagram.com/nazarii._l?igsh=ZmdhaGFzcXF3Mmhu">
-                <span class="u-icon u-social-icon u-social-instagram u-text-white u-icon-3"><svg class="u-svg-link"
+                <span class="u-icon u-social-icon u-social-instagram u-text-white u-icon-3" style="height: 45px !important;"><svg class="u-svg-link"
                                                                                                  preserveAspectRatio="xMidYMin slice"
                                                                                                  viewBox="0 0 112 112"
                                                                                                  style=""><use
