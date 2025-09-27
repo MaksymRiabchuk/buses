@@ -5,7 +5,7 @@
         <div class="u-palette-1-base u-section-row u-section-row-1">
             <div class="u-clearfix u-sheet u-valign-middle-lg u-valign-middle-xl u-valign-middle-xs u-sheet-1">
                 <div class="u-hidden-md u-hidden-sm u-hidden-xs u-social-icons u-spacing-10 u-social-icons-1">
-                    <a class="u-social-url" title="facebook" target="_blank" href="https://facebook.com/name">
+                    <a class="u-social-url" title="facebook" target="_blank" href="https://m.me/perevezenia.pasaziriv?hash=AbZ3lyPdzQi3NEqT&source=qr_link_share">
                 <span class="u-icon u-social-facebook u-social-icon u-text-white u-icon-1"><svg class="u-svg-link"
                                                                                                 preserveAspectRatio="xMidYMin slice"
                                                                                                 viewBox="0 0 112 112"
@@ -15,17 +15,7 @@
                                                                     id="svg-e935"><path fill="currentColor" d="M75.5,28.8H65.4c-1.5,0-4,0.9-4,4.3v9.4h13.9l-1.5,15.8H61.4v45.1H42.8V58.3h-8.8V42.4h8.8V32.2
 c0-7.4,3.4-18.8,18.8-18.8h13.8v15.4H75.5z"></path></svg></span>
                     </a>
-                    <a class="u-social-url" title="twitter" target="_blank" href="https://twitter.com/name">
-                <span class="u-icon u-social-icon u-social-twitter u-text-white u-icon-2"><svg class="u-svg-link"
-                                                                                               preserveAspectRatio="xMidYMin slice"
-                                                                                               viewBox="0 0 112.2 112.2"
-                                                                                               style=""><use
-                            xlink:href="#svg-b4b3"></use></svg><svg class="u-svg-content" viewBox="0 0 112.2 112.2"
-                                                                    x="0px"
-                                                                    y="0px" id="svg-b4b3"><path d="M67.1,49.1L98.6,16h-12L62,42L43.2,16H11l32.8,45.2L11,96h11.6l26.3-27.7L69.1,96H101L67.1,49.1z M55,61.9l-5.1-7L27.5,24.4
-	h11.4l17.3,23.8l5.1,7.1l23.4,32.2H73.8L55,61.9z"></path></svg></span>
-                    </a>
-                    <a class="u-social-url" title="instagram" target="_blank" href="https://instagram.com/name">
+                    <a class="u-social-url" title="instagram" target="_blank" href="https://www.instagram.com/nazarii._l?igsh=ZmdhaGFzcXF3Mmhu">
                 <span class="u-icon u-social-icon u-social-instagram u-text-white u-icon-3"><svg class="u-svg-link"
                                                                                                  preserveAspectRatio="xMidYMin slice"
                                                                                                  viewBox="0 0 112 112"

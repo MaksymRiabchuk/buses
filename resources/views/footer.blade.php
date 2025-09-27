@@ -64,7 +64,7 @@
                         <div class="u-container-layout u-valign-top u-container-layout-7">
                             <h4 class="u-align-left u-text u-text-10"> Часи роботи:</h4>
                             <div class="u-border-3 u-border-palette-1-base u-line u-line-horizontal u-line-5"></div>
-                            <p class="u-align-left u-text u-text-11"> Пн-Пт <br>9:00  - 17:00  <br>Сб <br>9:00 AM - 14:00 PM <br>Нд<br>Вихідний
+                            <p class="u-align-left u-text u-text-11"> Пн-Пт <br>9:00  - 19:00  <br>Сб <br>10:00 - 17:00 <br>Нд<br>Вихідний
                             </p>
                         </div>
                     </div>
